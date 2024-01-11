@@ -5,7 +5,7 @@ LDFLAGS = -shared
 # EXEC = my_program
 
 # List of source files
-SRC = sum.c my_c_function.c
+SRC = sum.c my_c_function.c spi_transfer.c
 OBJ = $(SRC:.c=.o)
 LIB = libmylibrary.so
 
