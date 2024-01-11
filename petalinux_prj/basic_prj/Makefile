@@ -1,20 +1,22 @@
 # Makefile
 CC = gcc
-CFLAGS = -Wall
-EXEC = my_program
+CFLAGS = -Wall -fPIC
+LDFLAGS = -shared
+# EXEC = my_program
 
 # List of source files
-SRC = main.c sum.c
+SRC = sum.c my_c_function.c
 OBJ = $(SRC:.c=.o)
+LIB = libmylibrary.so
 
 # Targets
-all: $(EXEC)
+all: $(LIB)
 
-$(EXEC): $(OBJ)
-	$(CC) $(OBJ) -o $(EXEC)
+$(LIB): $(OBJ)
+	$(CC) $(LDFLAGS) -o $(LIB) $(OBJ)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ) $(EXEC)
+	rm -f $(OBJ) $(LIB)
