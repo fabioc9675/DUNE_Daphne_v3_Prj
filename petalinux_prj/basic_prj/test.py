@@ -1,5 +1,6 @@
 # test.py
 import ctypes
+import time
 
 # Cargar la biblioteca compartida
 my_library = ctypes.CDLL('./libmylibrary.so')
@@ -41,3 +42,9 @@ print("Suma desde C:", result)
 
 # Llamar a la otra función desde C
 my_library.my_function()
+
+# turn on gpio
+my_library.gpio_chip_on()
+time.sleep(1)
+my_library.gpio_chip_off()
+
