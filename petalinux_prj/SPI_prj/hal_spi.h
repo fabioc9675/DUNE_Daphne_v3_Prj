@@ -56,7 +56,10 @@ typedef struct __SPI_HandleTypeDef
 
 /* Prototype -----------------------------------------------------------------*/
 
+
 /* Base functions */
+int HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *dataW, uint8_t *dataR, uint8_t dataSize, uint16_t Timeout);
+
 int HAL_SPI_OPEN(SPI_HandleTypeDef *hspi);
 int HAL_SPI_CLOSE(SPI_HandleTypeDef *hspi);
 

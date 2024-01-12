@@ -18,6 +18,7 @@ SPI_HandleTypeDef hspi4;
 #define SPI_DEVICE_3_0 "/dev/spidev3.0"
 #define SPI_DEVICE_4_0 "/dev/spidev4.0"
 
+
 /* Prototype -----------------------------------------------------------------*/
 
 /* SPI init functions */
@@ -30,8 +31,6 @@ int MX_SPI3_Init(void)
 
 	// open SPI device
 	(void)HAL_SPI_OPEN(&hspi3);
-	(void)HAL_SPI_CLOSE(&hspi3);
-	printf("Cerrado exitosamente\n");
 
 	return (HAL_OK);
 }
@@ -46,10 +45,51 @@ int MX_SPI4_Init(void)
 
 	// open SPI device
 	(void)HAL_SPI_OPEN(&hspi4);
+
+	return (HAL_OK);
+}
+
+/* SPI Stop functions */
+int MX_SPI3_Deinit(void)
+{
+
+	// close SPI device
+	(void)HAL_SPI_CLOSE(&hspi3);
+	printf("Cerrado exitosamente\n");
+
+	return (HAL_OK);
+}
+
+/* SPI Stop functions */
+int MX_SPI4_Deinit(void)
+{
+
+	// close SPI device
 	(void)HAL_SPI_CLOSE(&hspi4);
 	printf("Cerrado exitosamente\n");
 
 	return (HAL_OK);
+}
+
+/* *****************************************************************************
+ * ** TRANSMIT RECEIVE FUNCTION
+ * *****************************************************************************/
+
+/* Transmit and Receive function */
+int HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *dataW, uint8_t *dataR, uint8_t dataSize, uint16_t Timeout)
+{
+	hspi->spi_trx.tx_buf = (unsigned long)dataW;
+	hspi->spi_trx.rx_buf = (unsigned long)dataR;
+	hspi->spi_trx.len = dataSize;
+
+	// Transmit and receive data from buffer
+	hspi->fileReturn = ioctl(hspi->fileDevice, SPI_IOC_MESSAGE(1), &(hspi->spi_trx));
+	if (hspi->fileReturn != 0) 
+	{
+		printf("SPI transfer returned %d...\r\n", hspi->fileReturn);
+	}
+
+	return(HAL_OK);
 }
 
 /* *****************************************************************************
