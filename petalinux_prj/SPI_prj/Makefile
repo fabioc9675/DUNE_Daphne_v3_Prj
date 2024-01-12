@@ -1,22 +1,41 @@
 # Makefile
+
+# Compiler
 CC = gcc
-CFLAGS = -Wall -fPIC
+# Compilation flags
+CFLAGS = -Wall -fPIC -I$(INCLUDE_DIR)
+# Linking flags
 LDFLAGS = -shared
-# EXEC = my_program
 
-# List of source files
+# Directories
+SRC_DIR = src
+INCLUDE_DIR = include
+
+# Source files
 SRC = hal_spi.c
-OBJ = $(SRC:.c=.o)
-LIB = afe5808_lib.so
+# Object files
+OBJ = $(patsubst %.c, $(SRC_DIR)/%.o, $(SRC))
+# Shared library
+LIB = afe5808a_lib.so
 
-# Targets
+# Default rule
 all: $(LIB)
 
+# Rule to build the shared library
 $(LIB): $(OBJ)
 	$(CC) $(LDFLAGS) -o $(LIB) $(OBJ)
 
-%.o: %.c
+# Rule to build object files from source files
+$(OBJ): | $(SRC_DIR)
+
+$(SRC_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+# Rule to create the source directory if it doesn't exist
+$(SRC_DIR):
+	mkdir -p $@
+
+# Rule to clean generated files
 clean:
 	rm -f $(OBJ) $(LIB)
+
