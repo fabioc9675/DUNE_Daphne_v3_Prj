@@ -11,8 +11,6 @@
 #define INC_AFE5808A_H_
 
 /* Includes ------------------------------------------------------------------*/
-typedef int uint16_t;
-
 /**
  * @brief  HAL Status structures definition
  */

@@ -27,16 +27,18 @@
 /* Variables -----------------------------------------------------------------*/
 
 /* TypeDef ------------------------------------------------------------------*/
-#define HAL_OK 0
-#define HAL_ERROR 1
-
 #define LOW_STATE 0
 #define HIGH_STATE 1
 
-#define SET_CS LOW_STATE
-#define CLR_CS HIGH_STATE
-
 /* TYPEDEF HAL_AFE Register Map --------------------------------------------------*/
+/**
+ * @brief  HAL Status structures definition
+ */
+typedef enum {
+	HAL_SPI_OK = 0x00U,
+	HAL_SPI_ERROR = 0x01U
+} HAL_SPIStatusTypeDef;
+
 /**
  * @brief  AFE5808A handle Structure definition
  */
@@ -54,24 +56,25 @@ typedef struct __SPI_HandleTypeDef
 
 } SPI_HandleTypeDef;
 
+/* Extern Variables -----------------------------------------------------------------*/
+extern SPI_HandleTypeDef hspi3;
+extern SPI_HandleTypeDef hspi4;
+
 /* Prototype -----------------------------------------------------------------*/
 
-
 /* Base functions */
-int HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *dataW, uint8_t *dataR, uint8_t dataSize, uint16_t Timeout);
+HAL_SPIStatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *dataW, uint8_t *dataR,
+							uint8_t dataSize, uint16_t Timeout);
 
-int HAL_SPI_OPEN(SPI_HandleTypeDef *hspi);
-int HAL_SPI_CLOSE(SPI_HandleTypeDef *hspi);
+HAL_SPIStatusTypeDef HAL_SPI_OPEN(SPI_HandleTypeDef *hspi);
+HAL_SPIStatusTypeDef HAL_SPI_CLOSE(SPI_HandleTypeDef *hspi);
 
 /* SPI init functions */
-int MX_SPI3_Init(void);
-int MX_SPI4_Init(void);
+HAL_SPIStatusTypeDef MX_SPI3_Init(void);
+HAL_SPIStatusTypeDef MX_SPI4_Init(void);
 
 /* SPI close functions */
-int MX_SPI3_Deinit(void);
-int MX_SPI4_Deinit(void);
-
-/* SPI AFE operation config ***************************************************/
-void MX_SPI_AFE_OP_Config(SPI_HandleTypeDef *hspi);
+HAL_SPIStatusTypeDef MX_SPI3_Deinit(void);
+HAL_SPIStatusTypeDef MX_SPI4_Deinit(void);
 
 #endif /* __HAL_SPI_H__ */
