@@ -82,7 +82,7 @@ HAL_SPIStatusTypeDef MX_SPI4_Deinit(void)
 
 /* Transmit and Receive function */
 HAL_SPIStatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *dataW, uint8_t *dataR,
-							uint8_t dataSize, uint16_t Timeout)
+											 uint8_t dataSize, uint16_t Timeout)
 {
 	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
 
@@ -94,7 +94,7 @@ HAL_SPIStatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *d
 	hspi->fileReturn = ioctl(hspi->fileDevice, SPI_IOC_MESSAGE(1), &(hspi->spi_trx));
 	if (hspi->fileReturn != 0)
 	{
-		printf("SPI transfer returned %d...\r\n", hspi->fileReturn);
+		// printf("SPI transfer returned %d...\r\n", hspi->fileReturn);
 	}
 
 	return (errorcode);

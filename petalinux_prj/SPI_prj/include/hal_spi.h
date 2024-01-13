@@ -34,7 +34,8 @@
 /**
  * @brief  HAL Status structures definition
  */
-typedef enum {
+typedef enum
+{
 	HAL_SPI_OK = 0x00U,
 	HAL_SPI_ERROR = 0x01U
 } HAL_SPIStatusTypeDef;
@@ -64,7 +65,7 @@ extern SPI_HandleTypeDef hspi4;
 
 /* Base functions */
 HAL_SPIStatusTypeDef HAL_SPI_TransmitReceive(SPI_HandleTypeDef *hspi, uint8_t *dataW, uint8_t *dataR,
-							uint8_t dataSize, uint16_t Timeout);
+											 uint8_t dataSize, uint16_t Timeout);
 
 HAL_SPIStatusTypeDef HAL_SPI_OPEN(SPI_HandleTypeDef *hspi);
 HAL_SPIStatusTypeDef HAL_SPI_CLOSE(SPI_HandleTypeDef *hspi);
