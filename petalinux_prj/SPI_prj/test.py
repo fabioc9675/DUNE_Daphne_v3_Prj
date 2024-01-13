@@ -22,6 +22,11 @@ hafe0_py = ctypes.cast(hafe0, ctypes.POINTER(AFE_HandleTypeDef)).contents
 hafe0_py.ADCRegisterMap.REG03bits.DIGITAL_GAIN_ENABLE = 1
 my_library.HAL_AFEWriteRegister(hafe0, 3, ctypes.byref(hafe0_py.ADCRegisterMap.REG03bits))
 
+readData = (ctypes.c_uint16)(0)
+my_library.HAL_AFEReadRegister(hafe0, 3, ctypes.byref(readData))
+print("REG03bits = ", readData)
+
+# Cerrar el SPI device
 my_library.MX_SPI3_Deinit() # Initialize the SPI driver
 
 

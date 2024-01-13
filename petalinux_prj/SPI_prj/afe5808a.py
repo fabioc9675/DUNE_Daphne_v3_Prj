@@ -314,7 +314,7 @@ class AFE_VCARegisterMap(ctypes.LittleEndianStructure):
 # Define la estructura principal AFE_HandleTypeDef
 class SPI_HandleTypeDef(ctypes.LittleEndianStructure):
     _fields_ = [
-        ("SPI_Device", ctypes.c_char),
+        ("SPI_Device", ctypes.c_char_p),
         ("spi_trx", ctypes.c_void_p),
         ("fileDevice", ctypes.c_int),
         ("fileReturn", ctypes.c_int),
