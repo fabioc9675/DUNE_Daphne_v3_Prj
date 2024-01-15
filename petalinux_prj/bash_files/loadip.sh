@@ -25,6 +25,8 @@ chown petalinux:petalinux /dev/i2c-7
 chown petalinux:petalinux /dev/i2c-8
 chown petalinux:petalinux /dev/ttyUL0
 chown petalinux:petalinux /dev/ttyUL1
+chown petalinux:petalinux /dev/gpiochip2
+chown petalinux:petalinux /dev/gpiochip3
 
 echo ""
 echo ""
@@ -40,6 +42,8 @@ chmod 777 /dev/i2c-7
 chmod 777 /dev/i2c-8
 chmod 777 /dev/ttyUL0
 chmod 777 /dev/ttyUL1
+chmod 777 /dev/gpiochip2
+chmod 777 /dev/gpiochip3
 
 echo ""
 echo ""
