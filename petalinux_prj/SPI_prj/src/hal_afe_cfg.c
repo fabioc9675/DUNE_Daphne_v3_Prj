@@ -17,6 +17,18 @@ extern AFE_HandleTypeDef hafe2;
 extern AFE_HandleTypeDef hafe3;
 extern AFE_HandleTypeDef hafe4;
 
+extern AD_HandleTypeDef hdac_trimAfe0;
+extern AD_HandleTypeDef hdac_trimAfe1;
+extern AD_HandleTypeDef hdac_trimAfe2;
+extern AD_HandleTypeDef hdac_trimAfe3;
+extern AD_HandleTypeDef hdac_trimAfe4;
+
+extern AD_HandleTypeDef hdac_offsAfe0;
+extern AD_HandleTypeDef hdac_offsAfe1;
+extern AD_HandleTypeDef hdac_offsAfe2;
+extern AD_HandleTypeDef hdac_offsAfe3;
+extern AD_HandleTypeDef hdac_offsAfe4;
+
 /* Prototype -----------------------------------------------------------------*/
 /* AFE Test configuration */
 HAL_AFEStatusTypeDef HAL_AFE_TestConfig(AFE_HandleTypeDef *hafe)

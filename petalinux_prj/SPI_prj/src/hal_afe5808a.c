@@ -18,6 +18,17 @@ AFE_HandleTypeDef hafe3;
 AFE_HandleTypeDef hafe4;
 
 /* Extern Handle -------------------------------------------------------------*/
+extern AD_HandleTypeDef hdac_trimAfe0;
+extern AD_HandleTypeDef hdac_trimAfe1;
+extern AD_HandleTypeDef hdac_trimAfe2;
+extern AD_HandleTypeDef hdac_trimAfe3;
+extern AD_HandleTypeDef hdac_trimAfe4;
+
+extern AD_HandleTypeDef hdac_offsAfe0;
+extern AD_HandleTypeDef hdac_offsAfe1;
+extern AD_HandleTypeDef hdac_offsAfe2;
+extern AD_HandleTypeDef hdac_offsAfe3;
+extern AD_HandleTypeDef hdac_offsAfe4;
 
 /* Variables -----------------------------------------------------------------*/
 
@@ -37,9 +48,9 @@ void MX_AFE0_Init(void)
     // hafe0.RST_Port = AFE_RST_P_GPIO_Port;
     // hafe0.RST_Pin = AFE_RST_P_Pin;
 
-    // // Instantiation  of Trim and Offset DACs
-    // hafe0.AD_DACTrim = &hdac_trimAfe0;
-    // hafe0.AD_DACOffset = &hdac_offsAfe0;
+    // Instantiation  of Trim and Offset DACs
+    hafe0.AD_DACTrim = &hdac_trimAfe0;
+    hafe0.AD_DACOffset = &hdac_offsAfe0;
 
     // // initialization of SPI CS state
     // HAL_GPIO_WritePin(hafe0.CS_Port, hafe0.CS_Pin, CLR_CS);
@@ -59,9 +70,9 @@ void MX_AFE1_Init(void)
     // hafe1.RST_Port = AFE_RST_P_GPIO_Port;
     // hafe1.RST_Pin = AFE_RST_P_Pin;
 
-    // // Instantiation  of Trim and Offset DACs
-    // hafe1.AD_DACTrim = &hdac_trimAfe1;
-    // hafe1.AD_DACOffset = &hdac_offsAfe1;
+    // Instantiation  of Trim and Offset DACs
+    hafe1.AD_DACTrim = &hdac_trimAfe1;
+    hafe1.AD_DACOffset = &hdac_offsAfe1;
 
     // // initialization of SPI CS state
     // HAL_GPIO_WritePin(hafe1.CS_Port, hafe1.CS_Pin, CLR_CS);
@@ -81,9 +92,9 @@ void MX_AFE2_Init(void)
     // hafe2.RST_Port = AFE_RST_P_GPIO_Port;
     // hafe2.RST_Pin = AFE_RST_P_Pin;
 
-    // // Instantiation  of Trim and Offset DACs
-    // hafe2.AD_DACTrim = &hdac_trimAfe2;
-    // hafe2.AD_DACOffset = &hdac_offsAfe2;
+    // Instantiation  of Trim and Offset DACs
+    hafe2.AD_DACTrim = &hdac_trimAfe2;
+    hafe2.AD_DACOffset = &hdac_offsAfe2;
 
     // // initialization of SPI CS state
     // HAL_GPIO_WritePin(hafe2.CS_Port, hafe2.CS_Pin, CLR_CS);
@@ -103,9 +114,9 @@ void MX_AFE3_Init(void)
     // hafe3.RST_Port = AFE_RST_P_GPIO_Port;
     // hafe3.RST_Pin = AFE_RST_P_Pin;
 
-    // // Instantiation  of Trim and Offset DACs
-    // hafe3.AD_DACTrim = &hdac_trimAfe3;
-    // hafe3.AD_DACOffset = &hdac_offsAfe3;
+    // Instantiation  of Trim and Offset DACs
+    hafe3.AD_DACTrim = &hdac_trimAfe3;
+    hafe3.AD_DACOffset = &hdac_offsAfe3;
 
     // // initialization of SPI CS state
     // HAL_GPIO_WritePin(hafe3.CS_Port, hafe3.CS_Pin, CLR_CS);
@@ -125,9 +136,9 @@ void MX_AFE4_Init(void)
     // hafe4.RST_Port = AFE_RST_P_GPIO_Port;
     // hafe4.RST_Pin = AFE_RST_P_Pin;
 
-    // // Instantiation  of Trim and Offset DACs
-    // hafe4.AD_DACTrim = &hdac_trimAfe4;
-    // hafe4.AD_DACOffset = &hdac_offsAfe4;
+    // Instantiation  of Trim and Offset DACs
+    hafe4.AD_DACTrim = &hdac_trimAfe4;
+    hafe4.AD_DACOffset = &hdac_offsAfe4;
 
     // // initialization of SPI CS state
     // HAL_GPIO_WritePin(hafe4.CS_Port, hafe4.CS_Pin, CLR_CS);
@@ -165,10 +176,14 @@ HAL_AFEStatusTypeDef HAL_AFEReadWriteRegister(AFE_HandleTypeDef *hafe,
     dataW[1] = ((*regDataW) >> 8) & 0xFF;
     dataW[2] = (*regDataW) & 0xFF;
 
-    // Activate device
+    // // Activate device
+    // HAL_GPIO_WritePin(hafe->CS_Port, hafe->CS_Pin, SET_CS);
+
     // Write data to the register
     (void)HAL_SPI_TransmitReceive(hafe->SPI_handle, dataW, dataR, dataSize, Timeout);
-    // Deactivate device
+
+    // // Deactivate device
+    // HAL_GPIO_WritePin(hafe->CS_Port, hafe->CS_Pin, CLR_CS);
 
     // Compose data
     *regDataR = (dataR[1] << 8) | dataR[2];
@@ -280,14 +295,15 @@ HAL_AFEStatusTypeDef MX_SPI_AFE_OP_Config(SPI_HandleTypeDef *hspi)
         errorcode = HAL_AFE_ERROR;
         return (errorcode);
     }
-    
+
     temp_State = hspi->spi_state; // Evaluation of the mode
     hspi->spi_state = SPI_MODE_0; // CPHA = 0; CPOL = 0;
 
-    printf("Before = %d, Actual = %d \n", temp_State, hspi->spi_state);
-
     if (hspi->spi_state != temp_State)
     {
+        // Comment this line
+        // printf("Configuring SPI MODE_0, Previous = %d, New = %d \n", temp_State, hspi->spi_state);
+
         hspi->fileReturn = ioctl(hspi->fileDevice, SPI_IOC_WR_MODE, &(hspi->spi_state));
         if (hspi->fileReturn != 0)
         {
@@ -297,6 +313,11 @@ HAL_AFEStatusTypeDef MX_SPI_AFE_OP_Config(SPI_HandleTypeDef *hspi)
             return (errorcode);
         }
     }
+    // else
+    // {
+    //     // Comment this line
+    //     printf("SPI MODE_0 configured\n");
+    // }
 
     return (errorcode);
 }

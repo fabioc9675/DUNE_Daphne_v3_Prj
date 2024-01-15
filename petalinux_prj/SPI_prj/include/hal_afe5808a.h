@@ -13,6 +13,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "hal_spi.h"
 #include "afe5808a.h"
+#include "hal_ad5327.h"
 
 /* Variables -----------------------------------------------------------------*/
 #define hafe0spi hspi3
@@ -48,8 +49,8 @@ typedef struct __AFE_HandleTypeDef
     AFE_ADCRegisterMap ADCRegisterMap; /*!< Register Map of ADC AFE5808A */
     AFE_VCARegisterMap VCARegisterMap; /*!< Register Map of VCA AFE5808A */
 
-    // AD_HandleTypeDef *AD_DACTrim; /*!< Struct that controls Trim DAC */
-    // AD_HandleTypeDef *AD_DACOffset; /*!< Struct that controls Offset DAC */
+    AD_HandleTypeDef *AD_DACTrim;   /*!< Struct that controls Trim DAC */
+    AD_HandleTypeDef *AD_DACOffset; /*!< Struct that controls Offset DAC */
 
 } AFE_HandleTypeDef;
 

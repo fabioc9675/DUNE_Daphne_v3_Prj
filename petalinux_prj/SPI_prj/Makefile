@@ -12,7 +12,7 @@ SRC_DIR = src
 INCLUDE_DIR = include
 
 # Source files
-SRC = hal_spi.c hal_afe5808a.c hal_afe_cfg.c
+SRC = hal_spi.c hal_afe5808a.c hal_ad5327.c hal_afe_cfg.c 
 # Object files
 OBJ = $(patsubst %.c, $(SRC_DIR)/%.o, $(SRC))
 # Shared library
