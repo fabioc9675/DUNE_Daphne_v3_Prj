@@ -269,9 +269,10 @@ HAL_AFEStatusTypeDef MX_SPI_AFE_OP_Config(SPI_HandleTypeDef *hspi)
 {
 
     HAL_AFEStatusTypeDef errorcode = HAL_AFE_OK;
+    uint32_t temp_State = 0;
 
     // Configure SPI mode
-    hspi->fileReturn = ioctl(hspi->fileDevice, SPI_IOC_RD_MODE32, &(hspi->spi_state));
+    hspi->fileReturn = ioctl(hspi->fileDevice, SPI_IOC_RD_MODE, &(hspi->spi_state));
     if (hspi->fileReturn != 0)
     {
         printf("Could not read SPI mode...\r\n");
@@ -279,14 +280,22 @@ HAL_AFEStatusTypeDef MX_SPI_AFE_OP_Config(SPI_HandleTypeDef *hspi)
         errorcode = HAL_AFE_ERROR;
         return (errorcode);
     }
-    hspi->spi_state |= SPI_MODE_0; // CPHA = 0; CPOL = 0;
-    hspi->fileReturn = ioctl(hspi->fileDevice, SPI_IOC_WR_MODE32, &(hspi->spi_state));
-    if (hspi->fileReturn != 0)
+    
+    temp_State = hspi->spi_state; // Evaluation of the mode
+    hspi->spi_state = SPI_MODE_0; // CPHA = 0; CPOL = 0;
+
+    printf("Before = %d, Actual = %d \n", temp_State, hspi->spi_state);
+
+    if (hspi->spi_state != temp_State)
     {
-        printf("Could not write SPI mode...\r\n");
-        // close(hspi->fileDevice);
-        errorcode = HAL_AFE_ERROR;
-        return (errorcode);
+        hspi->fileReturn = ioctl(hspi->fileDevice, SPI_IOC_WR_MODE, &(hspi->spi_state));
+        if (hspi->fileReturn != 0)
+        {
+            printf("Could not write SPI mode...\r\n");
+            // close(hspi->fileDevice);
+            errorcode = HAL_AFE_ERROR;
+            return (errorcode);
+        }
     }
 
     return (errorcode);
