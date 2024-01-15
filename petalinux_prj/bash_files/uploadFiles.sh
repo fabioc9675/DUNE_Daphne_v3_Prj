@@ -9,7 +9,7 @@ echo "##########################################################################
 echo ""
 echo ""
 
-echo petalinux | scp -r ../basic_prj/ petalinux@192.168.1.17:/home/petalinux
+echo petalinux | scp -r ../SPI_prj/ petalinux@192.168.1.17:/home/petalinux
 
 echo ""
 echo "#############################################################################"
