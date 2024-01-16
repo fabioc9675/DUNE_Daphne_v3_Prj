@@ -41,21 +41,21 @@ void MX_AFE0_Init(void)
 {
 
     hafe0.SPI_handle = &hafe0spi;
-    // hafe0.CS_Port = AFE0_SEN_GPIO_Port;
-    // hafe0.CS_Pin = AFE0_SEN_Pin;
-    // hafe0.PDN_Port = AFE_PDN_P_GPIO_Port;
-    // hafe0.PDN_Pin = AFE_PDN_P_Pin;
-    // hafe0.RST_Port = AFE_RST_P_GPIO_Port;
-    // hafe0.RST_Pin = AFE_RST_P_Pin;
+    hafe0.CS_Port = AFE0_SEN_Pin;
+    hafe0.CS_Pin = AFE0_SEN_Pin;
+    hafe0.PDN_Port = AFE_PDN_P_Pin;
+    hafe0.PDN_Pin = AFE_PDN_P_Pin;
+    hafe0.RST_Port = AFE_RST_P_Pin;
+    hafe0.RST_Pin = AFE_RST_P_Pin;
 
     // Instantiation  of Trim and Offset DACs
     hafe0.AD_DACTrim = &hdac_trimAfe0;
     hafe0.AD_DACOffset = &hdac_offsAfe0;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hafe0.CS_Port, hafe0.CS_Pin, CLR_CS);
-    // HAL_GPIO_WritePin(hafe0.PDN_Port, hafe0.PDN_Pin, LOW_STATE);
-    // HAL_GPIO_WritePin(hafe0.RST_Port, hafe0.RST_Pin, LOW_STATE);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hafe0.CS_Port, hafe0.CS_Pin, CLR_CS);
+    HAL_GPIO_WritePin(hafe0.PDN_Port, hafe0.PDN_Pin, LOW_STATE);
+    HAL_GPIO_WritePin(hafe0.RST_Port, hafe0.RST_Pin, LOW_STATE);
 }
 
 /* AFE1 init function */
@@ -63,21 +63,21 @@ void MX_AFE1_Init(void)
 {
 
     hafe1.SPI_handle = &hafe1spi;
-    // hafe1.CS_Port = AFE1_SEN_GPIO_Port;
-    // hafe1.CS_Pin = AFE1_SEN_Pin;
-    // hafe1.PDN_Port = AFE_PDN_P_GPIO_Port;
-    // hafe1.PDN_Pin = AFE_PDN_P_Pin;
-    // hafe1.RST_Port = AFE_RST_P_GPIO_Port;
-    // hafe1.RST_Pin = AFE_RST_P_Pin;
+    hafe1.CS_Port = AFE1_SEN_Pin;
+    hafe1.CS_Pin = AFE1_SEN_Pin;
+    hafe1.PDN_Port = AFE_PDN_P_Pin;
+    hafe1.PDN_Pin = AFE_PDN_P_Pin;
+    hafe1.RST_Port = AFE_RST_P_Pin;
+    hafe1.RST_Pin = AFE_RST_P_Pin;
 
     // Instantiation  of Trim and Offset DACs
     hafe1.AD_DACTrim = &hdac_trimAfe1;
     hafe1.AD_DACOffset = &hdac_offsAfe1;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hafe1.CS_Port, hafe1.CS_Pin, CLR_CS);
-    // HAL_GPIO_WritePin(hafe1.PDN_Port, hafe1.PDN_Pin, LOW_STATE);
-    // HAL_GPIO_WritePin(hafe1.RST_Port, hafe1.RST_Pin, LOW_STATE);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hafe1.CS_Port, hafe1.CS_Pin, CLR_CS);
+    HAL_GPIO_WritePin(hafe1.PDN_Port, hafe1.PDN_Pin, LOW_STATE);
+    HAL_GPIO_WritePin(hafe1.RST_Port, hafe1.RST_Pin, LOW_STATE);
 }
 
 /* AFE2 init function */
@@ -85,21 +85,21 @@ void MX_AFE2_Init(void)
 {
 
     hafe2.SPI_handle = &hafe2spi;
-    // hafe2.CS_Port = AFE2_SEN_GPIO_Port;
-    // hafe2.CS_Pin = AFE2_SEN_Pin;
-    // hafe2.PDN_Port = AFE_PDN_P_GPIO_Port;
-    // hafe2.PDN_Pin = AFE_PDN_P_Pin;
-    // hafe2.RST_Port = AFE_RST_P_GPIO_Port;
-    // hafe2.RST_Pin = AFE_RST_P_Pin;
+    hafe2.CS_Port = AFE2_SEN_Pin;
+    hafe2.CS_Pin = AFE2_SEN_Pin;
+    hafe2.PDN_Port = AFE_PDN_P_Pin;
+    hafe2.PDN_Pin = AFE_PDN_P_Pin;
+    hafe2.RST_Port = AFE_RST_P_Pin;
+    hafe2.RST_Pin = AFE_RST_P_Pin;
 
     // Instantiation  of Trim and Offset DACs
     hafe2.AD_DACTrim = &hdac_trimAfe2;
     hafe2.AD_DACOffset = &hdac_offsAfe2;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hafe2.CS_Port, hafe2.CS_Pin, CLR_CS);
-    // HAL_GPIO_WritePin(hafe2.PDN_Port, hafe2.PDN_Pin, LOW_STATE);
-    // HAL_GPIO_WritePin(hafe2.RST_Port, hafe2.RST_Pin, LOW_STATE);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hafe2.CS_Port, hafe2.CS_Pin, CLR_CS);
+    HAL_GPIO_WritePin(hafe2.PDN_Port, hafe2.PDN_Pin, LOW_STATE);
+    HAL_GPIO_WritePin(hafe2.RST_Port, hafe2.RST_Pin, LOW_STATE);
 }
 
 /* AFE3 init function */
@@ -107,21 +107,21 @@ void MX_AFE3_Init(void)
 {
 
     hafe3.SPI_handle = &hafe3spi;
-    // hafe3.CS_Port = AFE3_SEN_GPIO_Port;
-    // hafe3.CS_Pin = AFE3_SEN_Pin;
-    // hafe3.PDN_Port = AFE_PDN_P_GPIO_Port;
-    // hafe3.PDN_Pin = AFE_PDN_P_Pin;
-    // hafe3.RST_Port = AFE_RST_P_GPIO_Port;
-    // hafe3.RST_Pin = AFE_RST_P_Pin;
+    hafe3.CS_Port = AFE3_SEN_Pin;
+    hafe3.CS_Pin = AFE3_SEN_Pin;
+    hafe3.PDN_Port = AFE_PDN_P_Pin;
+    hafe3.PDN_Pin = AFE_PDN_P_Pin;
+    hafe3.RST_Port = AFE_RST_P_Pin;
+    hafe3.RST_Pin = AFE_RST_P_Pin;
 
     // Instantiation  of Trim and Offset DACs
     hafe3.AD_DACTrim = &hdac_trimAfe3;
     hafe3.AD_DACOffset = &hdac_offsAfe3;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hafe3.CS_Port, hafe3.CS_Pin, CLR_CS);
-    // HAL_GPIO_WritePin(hafe3.PDN_Port, hafe3.PDN_Pin, LOW_STATE);
-    // HAL_GPIO_WritePin(hafe3.RST_Port, hafe3.RST_Pin, LOW_STATE);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hafe3.CS_Port, hafe3.CS_Pin, CLR_CS);
+    HAL_GPIO_WritePin(hafe3.PDN_Port, hafe3.PDN_Pin, LOW_STATE);
+    HAL_GPIO_WritePin(hafe3.RST_Port, hafe3.RST_Pin, LOW_STATE);
 }
 
 /* AFE4 init function */
@@ -129,21 +129,21 @@ void MX_AFE4_Init(void)
 {
 
     hafe4.SPI_handle = &hafe4spi;
-    // hafe4.CS_Port = AFE4_SEN_GPIO_Port;
-    // hafe4.CS_Pin = AFE4_SEN_Pin;
-    // hafe4.PDN_Port = AFE_PDN_P_GPIO_Port;
-    // hafe4.PDN_Pin = AFE_PDN_P_Pin;
-    // hafe4.RST_Port = AFE_RST_P_GPIO_Port;
-    // hafe4.RST_Pin = AFE_RST_P_Pin;
+    hafe4.CS_Port = AFE4_SEN_Pin;
+    hafe4.CS_Pin = AFE4_SEN_Pin;
+    hafe4.PDN_Port = AFE_PDN_P_Pin;
+    hafe4.PDN_Pin = AFE_PDN_P_Pin;
+    hafe4.RST_Port = AFE_RST_P_Pin;
+    hafe4.RST_Pin = AFE_RST_P_Pin;
 
     // Instantiation  of Trim and Offset DACs
     hafe4.AD_DACTrim = &hdac_trimAfe4;
     hafe4.AD_DACOffset = &hdac_offsAfe4;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hafe4.CS_Port, hafe4.CS_Pin, CLR_CS);
-    // HAL_GPIO_WritePin(hafe4.PDN_Port, hafe4.PDN_Pin, LOW_STATE);
-    // HAL_GPIO_WritePin(hafe4.RST_Port, hafe4.RST_Pin, LOW_STATE);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hafe4.CS_Port, hafe4.CS_Pin, CLR_CS);
+    HAL_GPIO_WritePin(hafe4.PDN_Port, hafe4.PDN_Pin, LOW_STATE);
+    HAL_GPIO_WritePin(hafe4.RST_Port, hafe4.RST_Pin, LOW_STATE);
 }
 
 /* Base functions */
@@ -176,14 +176,14 @@ HAL_AFEStatusTypeDef HAL_AFEReadWriteRegister(AFE_HandleTypeDef *hafe,
     dataW[1] = ((*regDataW) >> 8) & 0xFF;
     dataW[2] = (*regDataW) & 0xFF;
 
-    // // Activate device
-    // HAL_GPIO_WritePin(hafe->CS_Port, hafe->CS_Pin, SET_CS);
+    // Activate device
+    HAL_GPIO_WritePin(hafe->CS_Port, hafe->CS_Pin, SET_CS);
 
     // Write data to the register
     (void)HAL_SPI_TransmitReceive(hafe->SPI_handle, dataW, dataR, dataSize, Timeout);
 
-    // // Deactivate device
-    // HAL_GPIO_WritePin(hafe->CS_Port, hafe->CS_Pin, CLR_CS);
+    // Deactivate device
+    HAL_GPIO_WritePin(hafe->CS_Port, hafe->CS_Pin, CLR_CS);
 
     // Compose data
     *regDataR = (dataR[1] << 8) | dataR[2];

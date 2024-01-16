@@ -34,18 +34,18 @@ void MX_AD_DAC_BIASSET_Init(void)
 {
 
     hdac_biasset.SPI_handle = &hdacbiasspi;
-    // hdac_biasset.Ldac_Port = DAC_LDACn_GPIO_Port;
-    // hdac_biasset.Ldac_Pin = DAC_LDACn_Pin;
-    // hdac_biasset.Sync_Port = DAC_SYNCn_GPIO_Port;
-    // hdac_biasset.Sync_Pin = DAC_SYNCn_Pin;
+    hdac_biasset.Ldac_Port = DAC_LDACn_Pin;
+    hdac_biasset.Ldac_Pin = DAC_LDACn_Pin;
+    hdac_biasset.Sync_Port = DAC_SYNCn_Pin;
+    hdac_biasset.Sync_Pin = DAC_SYNCn_Pin;
     hdac_biasset.is_DaisyChained = TRUE; // it is daisy chained
     hdac_biasset.is_Transmiting = FALSE;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hdac_biasset.Ldac_Port, hdac_biasset.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_biasset.Sync_Port, hdac_biasset.Sync_Pin,
-    // SYNC_DEACT);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hdac_biasset.Ldac_Port, hdac_biasset.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_biasset.Sync_Port, hdac_biasset.Sync_Pin,
+                      SYNC_DEACT);
 }
 
 /* AD_DAC0 init function */
@@ -54,31 +54,31 @@ void MX_AD_DAC_AFE0_Init(void)
 
     // DAC trim initialization
     hdac_trimAfe0.SPI_handle = &hdactrim0spi;
-    // hdac_trimAfe0.Ldac_Port = LDAC0_TRM_GPIO_Port;
-    // hdac_trimAfe0.Ldac_Pin = LDAC0_TRM_Pin;
-    // hdac_trimAfe0.Sync_Port = SYNC0_TRM_GPIO_Port;
-    // hdac_trimAfe0.Sync_Pin = SYNC0_TRM_Pin;
+    hdac_trimAfe0.Ldac_Port = LDAC0_TRM_Pin;
+    hdac_trimAfe0.Ldac_Pin = LDAC0_TRM_Pin;
+    hdac_trimAfe0.Sync_Port = SYNC0_TRM_Pin;
+    hdac_trimAfe0.Sync_Pin = SYNC0_TRM_Pin;
     hdac_trimAfe0.is_DaisyChained = TRUE; // it is daisy chained
     hdac_trimAfe0.is_Transmiting = FALSE;
 
     // DAC offset initialization
     hdac_offsAfe0.SPI_handle = &hdacoffs0spi;
-    // hdac_offsAfe0.Ldac_Port = LDAC0_OFF_GPIO_Port;
-    // hdac_offsAfe0.Ldac_Pin = LDAC0_OFF_Pin;
-    // hdac_offsAfe0.Sync_Port = SYNC0_OFF_GPIO_Port;
-    // hdac_offsAfe0.Sync_Pin = SYNC0_OFF_Pin;
+    hdac_offsAfe0.Ldac_Port = LDAC0_OFF_Pin;
+    hdac_offsAfe0.Ldac_Pin = LDAC0_OFF_Pin;
+    hdac_offsAfe0.Sync_Port = SYNC0_OFF_Pin;
+    hdac_offsAfe0.Sync_Pin = SYNC0_OFF_Pin;
     hdac_offsAfe0.is_DaisyChained = TRUE; // it is daisy chained
     hdac_offsAfe0.is_Transmiting = FALSE;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hdac_trimAfe0.Ldac_Port, hdac_trimAfe0.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe0.Ldac_Port, hdac_offsAfe0.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_trimAfe0.Sync_Port, hdac_trimAfe0.Sync_Pin,
-    // SYNC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe0.Sync_Port, hdac_offsAfe0.Sync_Pin,
-    // SYNC_DEACT);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hdac_trimAfe0.Ldac_Port, hdac_trimAfe0.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe0.Ldac_Port, hdac_offsAfe0.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_trimAfe0.Sync_Port, hdac_trimAfe0.Sync_Pin,
+                      SYNC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe0.Sync_Port, hdac_offsAfe0.Sync_Pin,
+                      SYNC_DEACT);
 }
 
 /* AD_DAC1 init function */
@@ -87,31 +87,31 @@ void MX_AD_DAC_AFE1_Init(void)
 
     // DAC trim initialization
     hdac_trimAfe1.SPI_handle = &hdactrim1spi;
-    // hdac_trimAfe1.Ldac_Port = LDAC1_TRM_GPIO_Port;
-    // hdac_trimAfe1.Ldac_Pin = LDAC1_TRM_Pin;
-    // hdac_trimAfe1.Sync_Port = SYNC1_TRM_GPIO_Port;
-    // hdac_trimAfe1.Sync_Pin = SYNC1_TRM_Pin;
+    hdac_trimAfe1.Ldac_Port = LDAC1_TRM_Pin;
+    hdac_trimAfe1.Ldac_Pin = LDAC1_TRM_Pin;
+    hdac_trimAfe1.Sync_Port = SYNC1_TRM_Pin;
+    hdac_trimAfe1.Sync_Pin = SYNC1_TRM_Pin;
     hdac_trimAfe1.is_DaisyChained = TRUE; // it is daisy chained
     hdac_trimAfe1.is_Transmiting = FALSE;
 
     // DAC offset initialization
     hdac_offsAfe1.SPI_handle = &hdacoffs1spi;
-    // hdac_offsAfe1.Ldac_Port = LDAC1_OFF_GPIO_Port;
-    // hdac_offsAfe1.Ldac_Pin = LDAC1_OFF_Pin;
-    // hdac_offsAfe1.Sync_Port = SYNC1_OFF_GPIO_Port;
-    // hdac_offsAfe1.Sync_Pin = SYNC1_OFF_Pin;
+    hdac_offsAfe1.Ldac_Port = LDAC1_OFF_Pin;
+    hdac_offsAfe1.Ldac_Pin = LDAC1_OFF_Pin;
+    hdac_offsAfe1.Sync_Port = SYNC1_OFF_Pin;
+    hdac_offsAfe1.Sync_Pin = SYNC1_OFF_Pin;
     hdac_offsAfe1.is_DaisyChained = TRUE; // it is daisy chained
     hdac_offsAfe1.is_Transmiting = FALSE;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hdac_trimAfe1.Ldac_Port, hdac_trimAfe1.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe1.Ldac_Port, hdac_offsAfe1.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_trimAfe1.Sync_Port, hdac_trimAfe1.Sync_Pin,
-    // SYNC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe1.Sync_Port, hdac_offsAfe1.Sync_Pin,
-    // SYNC_DEACT);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hdac_trimAfe1.Ldac_Port, hdac_trimAfe1.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe1.Ldac_Port, hdac_offsAfe1.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_trimAfe1.Sync_Port, hdac_trimAfe1.Sync_Pin,
+                      SYNC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe1.Sync_Port, hdac_offsAfe1.Sync_Pin,
+                      SYNC_DEACT);
 }
 
 /* AD_DAC2 init function */
@@ -120,31 +120,31 @@ void MX_AD_DAC_AFE2_Init(void)
 
     // DAC trim initialization
     hdac_trimAfe2.SPI_handle = &hdactrim2spi;
-    // hdac_trimAfe2.Ldac_Port = LDAC2_TRM_GPIO_Port;
-    // hdac_trimAfe2.Ldac_Pin = LDAC2_TRM_Pin;
-    // hdac_trimAfe2.Sync_Port = SYNC2_TRM_GPIO_Port;
-    // hdac_trimAfe2.Sync_Pin = SYNC2_TRM_Pin;
+    hdac_trimAfe2.Ldac_Port = LDAC2_TRM_Pin;
+    hdac_trimAfe2.Ldac_Pin = LDAC2_TRM_Pin;
+    hdac_trimAfe2.Sync_Port = SYNC2_TRM_Pin;
+    hdac_trimAfe2.Sync_Pin = SYNC2_TRM_Pin;
     hdac_trimAfe2.is_DaisyChained = TRUE; // it is daisy chained
     hdac_trimAfe2.is_Transmiting = FALSE;
 
     // DAC offset initialization
     hdac_offsAfe2.SPI_handle = &hdacoffs2spi;
-    // hdac_offsAfe2.Ldac_Port = LDAC2_OFF_GPIO_Port;
-    // hdac_offsAfe2.Ldac_Pin = LDAC2_OFF_Pin;
-    // hdac_offsAfe2.Sync_Port = SYNC2_OFF_GPIO_Port;
-    // hdac_offsAfe2.Sync_Pin = SYNC2_OFF_Pin;
+    hdac_offsAfe2.Ldac_Port = LDAC2_OFF_Pin;
+    hdac_offsAfe2.Ldac_Pin = LDAC2_OFF_Pin;
+    hdac_offsAfe2.Sync_Port = SYNC2_OFF_Pin;
+    hdac_offsAfe2.Sync_Pin = SYNC2_OFF_Pin;
     hdac_offsAfe2.is_DaisyChained = TRUE; // it is daisy chained
     hdac_offsAfe2.is_Transmiting = FALSE;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hdac_trimAfe2.Ldac_Port, hdac_trimAfe2.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe2.Ldac_Port, hdac_offsAfe2.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_trimAfe2.Sync_Port, hdac_trimAfe2.Sync_Pin,
-    // SYNC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe2.Sync_Port, hdac_offsAfe2.Sync_Pin,
-    // SYNC_DEACT);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hdac_trimAfe2.Ldac_Port, hdac_trimAfe2.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe2.Ldac_Port, hdac_offsAfe2.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_trimAfe2.Sync_Port, hdac_trimAfe2.Sync_Pin,
+                      SYNC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe2.Sync_Port, hdac_offsAfe2.Sync_Pin,
+                      SYNC_DEACT);
 }
 
 /* AD_DAC3 init function */
@@ -153,31 +153,31 @@ void MX_AD_DAC_AFE3_Init(void)
 
     // DAC trim initialization
     hdac_trimAfe3.SPI_handle = &hdactrim3spi;
-    // hdac_trimAfe3.Ldac_Port = LDAC3_TRM_GPIO_Port;
-    // hdac_trimAfe3.Ldac_Pin = LDAC3_TRM_Pin;
-    // hdac_trimAfe3.Sync_Port = SYNC3_TRM_GPIO_Port;
-    // hdac_trimAfe3.Sync_Pin = SYNC3_TRM_Pin;
+    hdac_trimAfe3.Ldac_Port = LDAC3_TRM_Pin;
+    hdac_trimAfe3.Ldac_Pin = LDAC3_TRM_Pin;
+    hdac_trimAfe3.Sync_Port = SYNC3_TRM_Pin;
+    hdac_trimAfe3.Sync_Pin = SYNC3_TRM_Pin;
     hdac_trimAfe3.is_DaisyChained = TRUE; // it is daisy chained
     hdac_trimAfe3.is_Transmiting = FALSE;
 
     // DAC offset initialization
     hdac_offsAfe3.SPI_handle = &hdacoffs3spi;
-    // hdac_offsAfe3.Ldac_Port = LDAC3_OFF_GPIO_Port;
-    // hdac_offsAfe3.Ldac_Pin = LDAC3_OFF_Pin;
-    // hdac_offsAfe3.Sync_Port = SYNC3_OFF_GPIO_Port;
-    // hdac_offsAfe3.Sync_Pin = SYNC3_OFF_Pin;
+    hdac_offsAfe3.Ldac_Port = LDAC3_OFF_Pin;
+    hdac_offsAfe3.Ldac_Pin = LDAC3_OFF_Pin;
+    hdac_offsAfe3.Sync_Port = SYNC3_OFF_Pin;
+    hdac_offsAfe3.Sync_Pin = SYNC3_OFF_Pin;
     hdac_offsAfe3.is_DaisyChained = TRUE; // it is daisy chained
     hdac_offsAfe3.is_Transmiting = FALSE;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hdac_trimAfe3.Ldac_Port, hdac_trimAfe3.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe3.Ldac_Port, hdac_offsAfe3.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_trimAfe3.Sync_Port, hdac_trimAfe3.Sync_Pin,
-    // SYNC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe3.Sync_Port, hdac_offsAfe3.Sync_Pin,
-    // SYNC_DEACT);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hdac_trimAfe3.Ldac_Port, hdac_trimAfe3.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe3.Ldac_Port, hdac_offsAfe3.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_trimAfe3.Sync_Port, hdac_trimAfe3.Sync_Pin,
+                      SYNC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe3.Sync_Port, hdac_offsAfe3.Sync_Pin,
+                      SYNC_DEACT);
 }
 
 /* AD_DAC4 init function */
@@ -186,31 +186,31 @@ void MX_AD_DAC_AFE4_Init(void)
 
     // DAC trim initialization
     hdac_trimAfe4.SPI_handle = &hdactrim4spi;
-    // hdac_trimAfe4.Ldac_Port = LDAC4_TRM_GPIO_Port;
-    // hdac_trimAfe4.Ldac_Pin = LDAC4_TRM_Pin;
-    // hdac_trimAfe4.Sync_Port = SYNC4_TRM_GPIO_Port;
-    // hdac_trimAfe4.Sync_Pin = SYNC4_TRM_Pin;
+    hdac_trimAfe4.Ldac_Port = LDAC4_TRM_Pin;
+    hdac_trimAfe4.Ldac_Pin = LDAC4_TRM_Pin;
+    hdac_trimAfe4.Sync_Port = SYNC4_TRM_Pin;
+    hdac_trimAfe4.Sync_Pin = SYNC4_TRM_Pin;
     hdac_trimAfe4.is_DaisyChained = TRUE; // it is daisy chained
     hdac_trimAfe4.is_Transmiting = FALSE;
 
     // DAC offset initialization
     hdac_offsAfe4.SPI_handle = &hdacoffs4spi;
-    // hdac_offsAfe4.Ldac_Port = LDAC4_OFF_GPIO_Port;
-    // hdac_offsAfe4.Ldac_Pin = LDAC4_OFF_Pin;
-    // hdac_offsAfe4.Sync_Port = SYNC4_OFF_GPIO_Port;
-    // hdac_offsAfe4.Sync_Pin = SYNC4_OFF_Pin;
+    hdac_offsAfe4.Ldac_Port = LDAC4_OFF_Pin;
+    hdac_offsAfe4.Ldac_Pin = LDAC4_OFF_Pin;
+    hdac_offsAfe4.Sync_Port = SYNC4_OFF_Pin;
+    hdac_offsAfe4.Sync_Pin = SYNC4_OFF_Pin;
     hdac_offsAfe4.is_DaisyChained = TRUE; // it is daisy chained
     hdac_offsAfe4.is_Transmiting = FALSE;
 
-    // // initialization of SPI CS state
-    // HAL_GPIO_WritePin(hdac_trimAfe4.Ldac_Port, hdac_trimAfe4.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe4.Ldac_Port, hdac_offsAfe4.Ldac_Pin,
-    // LDAC_DEACT);
-    // HAL_GPIO_WritePin(hdac_trimAfe4.Sync_Port, hdac_trimAfe4.Sync_Pin,
-    // SYNC_DEACT);
-    // HAL_GPIO_WritePin(hdac_offsAfe4.Sync_Port, hdac_offsAfe4.Sync_Pin,
-    // SYNC_DEACT);
+    // initialization of SPI CS state
+    HAL_GPIO_WritePin(hdac_trimAfe4.Ldac_Port, hdac_trimAfe4.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe4.Ldac_Port, hdac_offsAfe4.Ldac_Pin,
+                      LDAC_DEACT);
+    HAL_GPIO_WritePin(hdac_trimAfe4.Sync_Port, hdac_trimAfe4.Sync_Pin,
+                      SYNC_DEACT);
+    HAL_GPIO_WritePin(hdac_offsAfe4.Sync_Port, hdac_offsAfe4.Sync_Pin,
+                      SYNC_DEACT);
 }
 
 /**
@@ -243,9 +243,9 @@ HAL_ADStatusTypeDef HAL_DAC_TrimOffsetWriteRegister(AD_HandleTypeDef *haddac,
     dataW[2] = ((*regData1W) >> 8) & 0xFF;
     dataW[3] = (*regData1W) & 0xFF;
 
-    // // Activate device
-    // HAL_GPIO_WritePin(haddac->Ldac_Port, haddac->Ldac_Pin, LDAC_DEACT);
-    // HAL_GPIO_WritePin(haddac->Sync_Port, haddac->Sync_Pin, SYNC_ACT);
+    // Activate device
+    HAL_GPIO_WritePin(haddac->Ldac_Port, haddac->Ldac_Pin, LDAC_DEACT);
+    HAL_GPIO_WritePin(haddac->Sync_Port, haddac->Sync_Pin, SYNC_ACT);
 
     // Write data to the register
     if (haddac->is_DaisyChained == TRUE)
@@ -257,9 +257,9 @@ HAL_ADStatusTypeDef HAL_DAC_TrimOffsetWriteRegister(AD_HandleTypeDef *haddac,
         (void)HAL_SPI_TransmitReceive(haddac->SPI_handle, dataW, dataR, dataSize, Timeout);
     }
 
-    // // Deactivate device
-    // HAL_GPIO_WritePin(haddac->Sync_Port, haddac->Sync_Pin, SYNC_DEACT);
-    // HAL_GPIO_WritePin(haddac->Ldac_Port, haddac->Ldac_Pin, LDAC_ACT);
+    // Deactivate device
+    HAL_GPIO_WritePin(haddac->Sync_Port, haddac->Sync_Pin, SYNC_DEACT);
+    HAL_GPIO_WritePin(haddac->Ldac_Port, haddac->Ldac_Pin, LDAC_ACT);
     haddac->is_Transmiting = FALSE;
 
     return errorcode;
@@ -295,9 +295,9 @@ HAL_ADStatusTypeDef HAL_DAC_BiasSetWriteRegister(AD_HandleTypeDef *haddac,
     dataW[4] = ((*regData1W) >> 8) & 0xFF;
     dataW[5] = (*regData1W) & 0xFF;
 
-    // // Activate device
-    // HAL_GPIO_WritePin(haddac->Ldac_Port, haddac->Ldac_Pin, LDAC_DEACT);
-    // HAL_GPIO_WritePin(haddac->Sync_Port, haddac->Sync_Pin, SYNC_ACT);
+    // Activate device
+    HAL_GPIO_WritePin(haddac->Ldac_Port, haddac->Ldac_Pin, LDAC_DEACT);
+    HAL_GPIO_WritePin(haddac->Sync_Port, haddac->Sync_Pin, SYNC_ACT);
 
     // Write data to the register
     if (haddac->is_DaisyChained == TRUE)
@@ -311,9 +311,9 @@ HAL_ADStatusTypeDef HAL_DAC_BiasSetWriteRegister(AD_HandleTypeDef *haddac,
                                       (uint8_t *)dataR, dataSize, Timeout);
     }
 
-    // // Deactivate device
-    // HAL_GPIO_WritePin(haddac->Sync_Port, haddac->Sync_Pin, SYNC_DEACT);
-    // HAL_GPIO_WritePin(haddac->Ldac_Port, haddac->Ldac_Pin, LDAC_ACT);
+    // Deactivate device
+    HAL_GPIO_WritePin(haddac->Sync_Port, haddac->Sync_Pin, SYNC_DEACT);
+    HAL_GPIO_WritePin(haddac->Ldac_Port, haddac->Ldac_Pin, LDAC_ACT);
 
     return errorcode;
 }

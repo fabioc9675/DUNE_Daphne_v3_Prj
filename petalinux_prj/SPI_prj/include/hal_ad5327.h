@@ -13,6 +13,7 @@
 /* Includes ------------------------------------------------------------------*/
 // #include "main.h"
 #include "hal_spi.h"
+#include "hal_gpio.h"
 #include "ad5327.h"
 
 /* Variables -----------------------------------------------------------------*/
@@ -42,9 +43,9 @@ typedef struct __AD_HandleTypeDef
 {
     SPI_HandleTypeDef *SPI_handle; /*!< SPI Handle type def */
 
-    // GPIO_TypeDef *Sync_Port; /*!< PORT Handle type def */
+    uint16_t Sync_Port; /*!< PORT Handle type def */
 
-    // GPIO_TypeDef *Ldac_Port; /*!< PORT Handle type def */
+    uint16_t Ldac_Port; /*!< PORT Handle type def */
 
     uint16_t Sync_Pin; /*!< PIN Handle type def */
 
