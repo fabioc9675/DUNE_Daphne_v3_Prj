@@ -87,7 +87,7 @@ void HAL_GPIO_WritePin(int gpio_port, int gpio_pin, int value)
 
     // Establecer el valor del pin GPIO
     snprintf(buffer, sizeof(buffer), "/sys/class/gpio/gpio%d/value", gpio_pin);
-    printf("%s\n", buffer);
+    // printf("%s\n", buffer);
     fd = open(buffer, O_WRONLY);
     if (value)
         write(fd, "1", 1);
