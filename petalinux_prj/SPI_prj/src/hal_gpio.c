@@ -23,51 +23,42 @@ void MX_GPIO_Init(void)
 {
 
     // AFE Pins
-    HAL_GPIO_PinOut_Init(PDN_AFE0);
-    HAL_GPIO_PinOut_Init(PDN_AFE1);
-    HAL_GPIO_PinOut_Init(PDN_AFE2);
-    HAL_GPIO_PinOut_Init(PDN_AFE3);
-    HAL_GPIO_PinOut_Init(PDN_AFE4);
+    HAL_GPIO_PinOut_Init(AFE_PDN_P_Pin);
+    HAL_GPIO_PinOut_Init(AFE_RST_P_Pin);
 
-    HAL_GPIO_PinOut_Init(RST_AFE0);
-    HAL_GPIO_PinOut_Init(RST_AFE1);
-    HAL_GPIO_PinOut_Init(RST_AFE2);
-    HAL_GPIO_PinOut_Init(RST_AFE3);
-    HAL_GPIO_PinOut_Init(RST_AFE4);
-
-    HAL_GPIO_PinOut_Init(SEN_AFE0);
-    HAL_GPIO_PinOut_Init(SEN_AFE1);
-    HAL_GPIO_PinOut_Init(SEN_AFE2);
-    HAL_GPIO_PinOut_Init(SEN_AFE3);
-    HAL_GPIO_PinOut_Init(SEN_AFE4);
+    HAL_GPIO_PinOut_Init(AFE0_SEN_Pin);
+    HAL_GPIO_PinOut_Init(AFE1_SEN_Pin);
+    HAL_GPIO_PinOut_Init(AFE2_SEN_Pin);
+    HAL_GPIO_PinOut_Init(AFE3_SEN_Pin);
+    HAL_GPIO_PinOut_Init(AFE4_SEN_Pin);
 
     // DAC Pins
-    HAL_GPIO_PinOut_Init(LDAC_BIAS);
-    HAL_GPIO_PinOut_Init(SYNC_BIAS);
+    HAL_GPIO_PinOut_Init(DAC_LDACn_Pin);
+    HAL_GPIO_PinOut_Init(DAC_SYNCn_Pin);
 
-    HAL_GPIO_PinOut_Init(LDAC_TRM_DAC0);
-    HAL_GPIO_PinOut_Init(LDAC_TRM_DAC1);
-    HAL_GPIO_PinOut_Init(LDAC_TRM_DAC2);
-    HAL_GPIO_PinOut_Init(LDAC_TRM_DAC3);
-    HAL_GPIO_PinOut_Init(LDAC_TRM_DAC4);
+    HAL_GPIO_PinOut_Init(LDAC0_TRM_Pin);
+    HAL_GPIO_PinOut_Init(LDAC1_TRM_Pin);
+    HAL_GPIO_PinOut_Init(LDAC2_TRM_Pin);
+    HAL_GPIO_PinOut_Init(LDAC3_TRM_Pin);
+    HAL_GPIO_PinOut_Init(LDAC4_TRM_Pin);
 
-    HAL_GPIO_PinOut_Init(SYNC_TRM_DAC0);
-    HAL_GPIO_PinOut_Init(SYNC_TRM_DAC1);
-    HAL_GPIO_PinOut_Init(SYNC_TRM_DAC2);
-    HAL_GPIO_PinOut_Init(SYNC_TRM_DAC3);
-    HAL_GPIO_PinOut_Init(SYNC_TRM_DAC4);
+    HAL_GPIO_PinOut_Init(SYNC0_TRM_Pin);
+    HAL_GPIO_PinOut_Init(SYNC1_TRM_Pin);
+    HAL_GPIO_PinOut_Init(SYNC2_TRM_Pin);
+    HAL_GPIO_PinOut_Init(SYNC3_TRM_Pin);
+    HAL_GPIO_PinOut_Init(SYNC4_TRM_Pin);
 
-    HAL_GPIO_PinOut_Init(LDAC_OFF_DAC0);
-    HAL_GPIO_PinOut_Init(LDAC_OFF_DAC1);
-    HAL_GPIO_PinOut_Init(LDAC_OFF_DAC2);
-    HAL_GPIO_PinOut_Init(LDAC_OFF_DAC3);
-    HAL_GPIO_PinOut_Init(LDAC_OFF_DAC4);
+    HAL_GPIO_PinOut_Init(LDAC0_OFF_Pin);
+    HAL_GPIO_PinOut_Init(LDAC1_OFF_Pin);
+    HAL_GPIO_PinOut_Init(LDAC2_OFF_Pin);
+    HAL_GPIO_PinOut_Init(LDAC3_OFF_Pin);
+    HAL_GPIO_PinOut_Init(LDAC4_OFF_Pin);
 
-    HAL_GPIO_PinOut_Init(SYNC_OFF_DAC0);
-    HAL_GPIO_PinOut_Init(SYNC_OFF_DAC1);
-    HAL_GPIO_PinOut_Init(SYNC_OFF_DAC2);
-    HAL_GPIO_PinOut_Init(SYNC_OFF_DAC3);
-    HAL_GPIO_PinOut_Init(SYNC_OFF_DAC4);
+    HAL_GPIO_PinOut_Init(SYNC0_OFF_Pin);
+    HAL_GPIO_PinOut_Init(SYNC1_OFF_Pin);
+    HAL_GPIO_PinOut_Init(SYNC2_OFF_Pin);
+    HAL_GPIO_PinOut_Init(SYNC3_OFF_Pin);
+    HAL_GPIO_PinOut_Init(SYNC4_OFF_Pin);
 
     return;
 }

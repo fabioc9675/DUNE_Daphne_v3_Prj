@@ -6,6 +6,7 @@ from afe5808a import *
 # Cargar la biblioteca compartida
 my_library = ctypes.CDLL('./afe5808a_lib.so')
 
+my_library.MX_GPIO_Init() # Initialize the GPIO driver
 my_library.MX_SPI3_Init() # Initialize the SPI driver
 my_library.MX_AFE0_Init() # Initialize the AFE0
 my_library.MX_AD_DAC_BIASSET_Init()

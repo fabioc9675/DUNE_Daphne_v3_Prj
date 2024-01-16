@@ -12,6 +12,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "hal_spi.h"
+#include "hal_gpio.h"
 #include "afe5808a.h"
 #include "hal_ad5327.h"
 
@@ -34,15 +35,15 @@ typedef struct __AFE_HandleTypeDef
 {
     SPI_HandleTypeDef *SPI_handle; /*!< SPI Handle type def */
 
-    // GPIO_TypeDef *CS_Port; /*!< PORT Handle type def */
+    uint16_t CS_Port; /*!< PORT Handle type def */
 
     uint16_t CS_Pin; /*!< PIN Handle type def */
 
-    // GPIO_TypeDef *RST_Port; /*!< PORT Handle type def */
+    uint16_t RST_Port; /*!< PORT Handle type def */
 
     uint16_t RST_Pin; /*!< PIN Handle type def */
 
-    // GPIO_TypeDef *PDN_Port; /*!< PORT Handle type def */
+    uint16_t PDN_Port; /*!< PORT Handle type def */
 
     uint16_t PDN_Pin; /*!< PIN Handle type def */
 
