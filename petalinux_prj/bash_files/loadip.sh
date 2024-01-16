@@ -27,6 +27,34 @@ chown petalinux:petalinux /dev/ttyUL0
 chown petalinux:petalinux /dev/ttyUL1
 chown petalinux:petalinux /dev/gpiochip2
 chown petalinux:petalinux /dev/gpiochip3
+# chown petalinux:petalinux -R /sys/class/gpio/gpiochip484/*
+# chown petalinux:petalinux -R /sys/class/gpio/gpiochip492/*
+
+echo ""
+echo ""
+echo "#############################################################################"
+echo "Exportar los GPIO pins"
+echo "#############################################################################"
+echo ""
+echo ""
+
+echo 492 | sudo tee /sys/class/gpio/export
+echo 493 | sudo tee /sys/class/gpio/export
+echo 494 | sudo tee /sys/class/gpio/export
+echo 495 | sudo tee /sys/class/gpio/export
+echo 496 | sudo tee /sys/class/gpio/export
+echo 497 | sudo tee /sys/class/gpio/export
+echo 498 | sudo tee /sys/class/gpio/export
+echo 499 | sudo tee /sys/class/gpio/export
+
+chown petalinux:petalinux -R /sys/class/gpio/gpio492/*
+chown petalinux:petalinux -R /sys/class/gpio/gpio493/*
+chown petalinux:petalinux -R /sys/class/gpio/gpio494/*
+chown petalinux:petalinux -R /sys/class/gpio/gpio495/*
+chown petalinux:petalinux -R /sys/class/gpio/gpio496/*
+chown petalinux:petalinux -R /sys/class/gpio/gpio497/*
+chown petalinux:petalinux -R /sys/class/gpio/gpio498/*
+chown petalinux:petalinux -R /sys/class/gpio/gpio499/*
 
 echo ""
 echo ""
