@@ -63,6 +63,8 @@ typedef struct __SPI_HandleTypeDef
 /* Extern Variables -----------------------------------------------------------------*/
 extern SPI_HandleTypeDef hspi3;
 extern SPI_HandleTypeDef hspi4;
+extern SPI_HandleTypeDef hspi5;
+extern SPI_HandleTypeDef hspi6;
 
 /* Prototype -----------------------------------------------------------------*/
 
@@ -76,9 +78,13 @@ HAL_SPIStatusTypeDef HAL_SPI_CLOSE(SPI_HandleTypeDef *hspi);
 /* SPI init functions */
 HAL_SPIStatusTypeDef MX_SPI3_Init(void);
 HAL_SPIStatusTypeDef MX_SPI4_Init(void);
+HAL_SPIStatusTypeDef MX_SPI5_Init(void);
+HAL_SPIStatusTypeDef MX_SPI6_Init(void);
 
 /* SPI close functions */
 HAL_SPIStatusTypeDef MX_SPI3_Deinit(void);
 HAL_SPIStatusTypeDef MX_SPI4_Deinit(void);
+HAL_SPIStatusTypeDef MX_SPI5_Deinit(void);
+HAL_SPIStatusTypeDef MX_SPI6_Deinit(void);
 
 #endif /* __HAL_SPI_H__ */

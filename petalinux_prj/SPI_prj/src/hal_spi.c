@@ -13,10 +13,14 @@
 /* Variables -----------------------------------------------------------------*/
 SPI_HandleTypeDef hspi3;
 SPI_HandleTypeDef hspi4;
+SPI_HandleTypeDef hspi5;
+SPI_HandleTypeDef hspi6;
 
 /* Variables -----------------------------------------------------------------*/
 #define SPI_DEVICE_3_0 "/dev/spidev3.0"
 #define SPI_DEVICE_4_0 "/dev/spidev4.0"
+#define SPI_DEVICE_5_0 "/dev/spidev5.0"
+#define SPI_DEVICE_6_0 "/dev/spidev6.0"
 
 /* Prototype -----------------------------------------------------------------*/
 
@@ -52,6 +56,38 @@ HAL_SPIStatusTypeDef MX_SPI4_Init(void)
 	return (errorcode);
 }
 
+/* SPI init functions */
+HAL_SPIStatusTypeDef MX_SPI5_Init(void)
+{
+	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
+
+	hspi5.spi_trx.bits_per_word = 0;
+	hspi5.spi_trx.speed_hz = 1000000;
+	hspi5.spi_trx.delay_usecs = 0;
+	hspi5.SPI_Device = SPI_DEVICE_5_0;
+
+	// open SPI device
+	errorcode = HAL_SPI_OPEN(&hspi5);
+
+	return (errorcode);
+}
+
+/* SPI init functions */
+HAL_SPIStatusTypeDef MX_SPI6_Init(void)
+{
+	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
+
+	hspi6.spi_trx.bits_per_word = 0;
+	hspi6.spi_trx.speed_hz = 1000000;
+	hspi6.spi_trx.delay_usecs = 0;
+	hspi6.SPI_Device = SPI_DEVICE_6_0;
+
+	// open SPI device
+	errorcode = HAL_SPI_OPEN(&hspi6);
+
+	return (errorcode);
+}
+
 /* SPI Stop functions */
 HAL_SPIStatusTypeDef MX_SPI3_Deinit(void)
 {
@@ -75,6 +111,31 @@ HAL_SPIStatusTypeDef MX_SPI4_Deinit(void)
 
 	return (errorcode);
 }
+
+/* SPI Stop functions */
+HAL_SPIStatusTypeDef MX_SPI5_Deinit(void)
+{
+	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
+
+	// close SPI device
+	errorcode = HAL_SPI_CLOSE(&hspi5);
+	// printf("Cerrado exitosamente\n");
+
+	return (errorcode);
+}
+
+/* SPI Stop functions */
+HAL_SPIStatusTypeDef MX_SPI6_Deinit(void)
+{
+	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
+
+	// close SPI device
+	errorcode = HAL_SPI_CLOSE(&hspi6);
+	// printf("Cerrado exitosamente\n");
+
+	return (errorcode);
+}
+
 
 /* *****************************************************************************
  * ** TRANSMIT RECEIVE FUNCTION

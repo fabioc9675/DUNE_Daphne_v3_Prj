@@ -17,17 +17,17 @@
 #include "ad5327.h"
 
 /* Variables -----------------------------------------------------------------*/
-#define hdacbiasspi hspi3
+#define hdacbiasspi hspi6
 #define hdactrim0spi hspi3
 #define hdacoffs0spi hspi3
-#define hdactrim1spi hspi3
-#define hdacoffs1spi hspi3
-#define hdactrim2spi hspi3
-#define hdacoffs2spi hspi3
-#define hdactrim3spi hspi4
-#define hdacoffs3spi hspi4
-#define hdactrim4spi hspi4
-#define hdacoffs4spi hspi4
+#define hdactrim1spi hspi4
+#define hdacoffs1spi hspi4
+#define hdactrim2spi hspi4
+#define hdacoffs2spi hspi4
+#define hdactrim3spi hspi5
+#define hdacoffs3spi hspi5
+#define hdactrim4spi hspi5
+#define hdacoffs4spi hspi5
 
 /* TypeDef -------------------------------------------------------------------*/
 #define SYNC_ACT LOW_STATE

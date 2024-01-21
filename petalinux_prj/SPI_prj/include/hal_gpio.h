@@ -28,42 +28,42 @@
 /* Extern Variables -----------------------------------------------------------------*/
 
 // AFE Pins
-#define AFE_PDN_P_Pin 498
-#define AFE_RST_P_Pin 497
+#define AFE_PDN_P_Pin 469
+#define AFE_RST_P_Pin 470
 
-#define AFE0_SEN_Pin 496
-#define AFE1_SEN_Pin 496
-#define AFE2_SEN_Pin 496
-#define AFE3_SEN_Pin 496
-#define AFE4_SEN_Pin 496
+#define AFE0_SEN_Pin 471
+#define AFE1_SEN_Pin 476
+#define AFE2_SEN_Pin 481
+#define AFE3_SEN_Pin 486
+#define AFE4_SEN_Pin 491
 
 // DAC Pins
-#define DAC_LDACn_Pin 492
-#define DAC_SYNCn_Pin 492
+#define DAC_LDACn_Pin 497
+#define DAC_SYNCn_Pin 496
 
-#define LDAC0_TRM_Pin 496
-#define LDAC1_TRM_Pin 493
-#define LDAC2_TRM_Pin 493
-#define LDAC3_TRM_Pin 493
-#define LDAC4_TRM_Pin 493
+#define SYNC0_TRM_Pin 472
+#define SYNC1_TRM_Pin 477
+#define SYNC2_TRM_Pin 482
+#define SYNC3_TRM_Pin 487
+#define SYNC4_TRM_Pin 492
 
-#define SYNC0_TRM_Pin 497
-#define SYNC1_TRM_Pin 494
-#define SYNC2_TRM_Pin 494
-#define SYNC3_TRM_Pin 494
-#define SYNC4_TRM_Pin 494
+#define LDAC0_TRM_Pin 473
+#define LDAC1_TRM_Pin 478
+#define LDAC2_TRM_Pin 483
+#define LDAC3_TRM_Pin 488
+#define LDAC4_TRM_Pin 492
 
-#define LDAC0_OFF_Pin 496
-#define LDAC1_OFF_Pin 493
-#define LDAC2_OFF_Pin 493
-#define LDAC3_OFF_Pin 493
-#define LDAC4_OFF_Pin 493
-
-#define SYNC0_OFF_Pin 497
-#define SYNC1_OFF_Pin 494
-#define SYNC2_OFF_Pin 494
-#define SYNC3_OFF_Pin 494
+#define SYNC0_OFF_Pin 474
+#define SYNC1_OFF_Pin 479
+#define SYNC2_OFF_Pin 484
+#define SYNC3_OFF_Pin 489
 #define SYNC4_OFF_Pin 494
+
+#define LDAC0_OFF_Pin 475
+#define LDAC1_OFF_Pin 480
+#define LDAC2_OFF_Pin 485
+#define LDAC3_OFF_Pin 490
+#define LDAC4_OFF_Pin 595
 
 /* Prototype -----------------------------------------------------------------*/
 

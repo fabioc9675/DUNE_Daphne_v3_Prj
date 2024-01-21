@@ -18,10 +18,10 @@
 
 /* Variables -----------------------------------------------------------------*/
 #define hafe0spi hspi3
-#define hafe1spi hspi3
-#define hafe2spi hspi3
-#define hafe3spi hspi4
-#define hafe4spi hspi4
+#define hafe1spi hspi4
+#define hafe2spi hspi4
+#define hafe3spi hspi5
+#define hafe4spi hspi5
 
 /* TypeDef ------------------------------------------------------------------*/
 #define SET_CS LOW_STATE
