@@ -30,7 +30,7 @@ HAL_SPIStatusTypeDef MX_SPI3_Init(void)
 	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
 
 	hspi3.spi_trx.bits_per_word = 0;
-	hspi3.spi_trx.speed_hz = 1000000;
+	hspi3.spi_trx.speed_hz = 25000000;
 	hspi3.spi_trx.delay_usecs = 0;
 	hspi3.SPI_Device = SPI_DEVICE_3_0;
 
@@ -46,7 +46,7 @@ HAL_SPIStatusTypeDef MX_SPI4_Init(void)
 	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
 
 	hspi4.spi_trx.bits_per_word = 0;
-	hspi4.spi_trx.speed_hz = 1000000;
+	hspi4.spi_trx.speed_hz = 25000000;
 	hspi4.spi_trx.delay_usecs = 0;
 	hspi4.SPI_Device = SPI_DEVICE_4_0;
 
@@ -62,7 +62,7 @@ HAL_SPIStatusTypeDef MX_SPI5_Init(void)
 	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
 
 	hspi5.spi_trx.bits_per_word = 0;
-	hspi5.spi_trx.speed_hz = 1000000;
+	hspi5.spi_trx.speed_hz = 25000000;
 	hspi5.spi_trx.delay_usecs = 0;
 	hspi5.SPI_Device = SPI_DEVICE_5_0;
 
@@ -78,7 +78,7 @@ HAL_SPIStatusTypeDef MX_SPI6_Init(void)
 	HAL_SPIStatusTypeDef errorcode = HAL_SPI_OK;
 
 	hspi6.spi_trx.bits_per_word = 0;
-	hspi6.spi_trx.speed_hz = 1000000;
+	hspi6.spi_trx.speed_hz = 25000000;
 	hspi6.spi_trx.delay_usecs = 0;
 	hspi6.SPI_Device = SPI_DEVICE_6_0;
 

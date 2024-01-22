@@ -10,6 +10,8 @@ my_library = ctypes.CDLL('./afe5808a_lib.so')
 my_library.MX_GPIO_Init() # Initialize the GPIO driver
 my_library.MX_SPI3_Init() # Initialize the SPI driver
 my_library.MX_SPI4_Init() # Initialize the SPI driver
+my_library.MX_SPI5_Init() # Initialize the SPI driver
+my_library.MX_SPI6_Init() # Initialize the SPI driver
 
 # AFE Initialization
 my_library.MX_AFE0_Init() # Initialize the AFE0
@@ -57,6 +59,9 @@ print("REG03bits = ", readData)
 
 # Cerrar el SPI device
 my_library.MX_SPI3_Deinit() # Initialize the SPI driver
+my_library.MX_SPI4_Deinit() # Initialize the SPI driver
+my_library.MX_SPI5_Deinit() # Initialize the SPI driver
+my_library.MX_SPI6_Deinit() # Initialize the SPI driver
 
 # Accede a los campos de la estructura
 # print("CS Pin:", hafe0_py.SPI_handle.SPI_Device.decode("utf-8"))

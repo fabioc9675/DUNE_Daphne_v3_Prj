@@ -28,8 +28,8 @@
 /* Extern Variables -----------------------------------------------------------------*/
 
 // AFE Pins
-#define AFE_PDN_P_Pin 469
-#define AFE_RST_P_Pin 470
+#define AFE_PDN_P_Pin 498
+#define AFE_RST_P_Pin 499
 
 #define AFE0_SEN_Pin 471
 #define AFE1_SEN_Pin 476
@@ -63,7 +63,7 @@
 #define LDAC1_OFF_Pin 480
 #define LDAC2_OFF_Pin 485
 #define LDAC3_OFF_Pin 490
-#define LDAC4_OFF_Pin 595
+#define LDAC4_OFF_Pin 495
 
 /* Prototype -----------------------------------------------------------------*/
 
