@@ -42,6 +42,8 @@ my_library.HAL_DAC1TrimOffset_SetValue(my_library.hdac_trimAfe0, 0, 20)
 time.sleep(0.01)
 my_library.HAL_DAC2TrimOffset_SetValue(my_library.hdac_trimAfe0, 2, 50)
 time.sleep(0.01)
+my_library.HAL_DAC1BiasSet_SetValue(my_library.hdac_biasset, 0, 32)
+time.sleep(0.01)
 
 # Accede a la instancia de la estructura (en este caso, hafe0)
 hafe0 = my_library.hafe0
