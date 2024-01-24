@@ -4,6 +4,8 @@ To list the functions in the library use `nm -D afe5808a_lib.so`
 
 To avoid upload error **Command \r not found**, use `sed -i 's/\r$//' UploadFiles.sh`
 
+to see all the attributes of the spidev device use `udevadm info --query=all --name=/dev/spidev3.0`
+
 ![1705117220876](image/Readme/1705117220876.png)
 
 ![1705117226089](image/Readme/1705117226089.png)
