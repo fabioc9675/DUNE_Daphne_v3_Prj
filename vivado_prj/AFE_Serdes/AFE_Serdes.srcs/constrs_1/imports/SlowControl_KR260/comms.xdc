@@ -8,7 +8,6 @@
 #set_property PULLUP TRUE [get_ports {kria_i2c_0_scl_io}]
 
 
-
 ##################### AFEn_PDN pin ###################################
 set_property PACKAGE_PIN AE12 [get_ports {afe_pdn_rst_bus_tri_io[0]}]          ;# AFE PDN pin
 set_property IOSTANDARD LVCMOS33 [get_ports {afe_pdn_rst_bus_tri_io[0]}]
@@ -16,7 +15,6 @@ set_property IOSTANDARD LVCMOS33 [get_ports {afe_pdn_rst_bus_tri_io[0]}]
 ##################### AFEn_RST pin ###################################
 set_property PACKAGE_PIN AG13 [get_ports {afe_pdn_rst_bus_tri_io[1]}]          ;# AFE RST pin
 set_property IOSTANDARD LVCMOS33 [get_ports {afe_pdn_rst_bus_tri_io[1]}]
-
 
 
 ##################### AFE0_SPI Interface ###################################
@@ -28,6 +26,23 @@ set_property IOSTANDARD LVCMOS33 [get_ports {afe0_sdata}]
 
 set_property PACKAGE_PIN H12 [get_ports {afe0_sclk}]                          ;# AFE SCK
 set_property IOSTANDARD LVCMOS33 [get_ports {afe0_sclk}]
+
+
+###################### AFE_CH1 ############################
+set_property PACKAGE_PIN F12 [get_ports {fclk_p_in}]                          ;# AFE FCLK_P pin
+set_property IOSTANDARD LVCMOS33 [get_ports {fclk_p_in}]
+
+set_property PACKAGE_PIN K13 [get_ports {fclk_n_in}]                          ;# AFE FCLK_N pin
+set_property IOSTANDARD LVCMOS33 [get_ports {fclk_n_in}]
+
+set_property PACKAGE_PIN AD10 [get_ports {data_p_in}]                         ;# AFE DATA_P pin
+set_property IOSTANDARD LVCMOS33 [get_ports {data_p_in}]
+
+set_property PACKAGE_PIN AD12 [get_ports {data_n_in}]                         ;# AFE DATA_N pin
+set_property IOSTANDARD LVCMOS33 [get_ports {data_p_in}]
+
+
+
 
 ##################### AFE1_AFE2_SPI Interface ##############################
 #set_property PACKAGE_PIN E12 [get_ports {afe1_afe2_sdout}]                     ;# AFE MISO

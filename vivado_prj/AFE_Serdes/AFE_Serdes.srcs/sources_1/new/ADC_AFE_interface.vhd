@@ -14,13 +14,14 @@ use UNISIM.VComponents.ALL;
 
 
 entity ADC_AFE_interface is
-    generic (dclk_period      : real  := 7.14); -- Input clock period (DCLK) in ns to ps resolution (i.e. 33.333 is 30 MHz). 7.14 ns 
+    generic (dclk_period      : real  := 10.0); -- Input clock period (DCLK) in ns to ps resolution (i.e. 33.333 is 30 MHz). 7.14 ns 
     Port (
             fclk_p      : in  std_logic;
             fclk_n      : in  std_logic;
             rst         : in  std_logic;
             data_p      : in  std_logic;
             data_n      : in  std_logic;
+            fclk_out    : out std_logic;
             dataOut     : out std_logic_vector(15 downto 0)
           );
 end ADC_AFE_interface;
@@ -78,9 +79,11 @@ begin
         I  => data_p,  -- Diff_p buffer input (connect directly to top-level port)
         IB => data_n -- Diff_n buffer input (connect directly to top-level port)
     );
-
+   
     -- End of IBUFDS_inst instantiation
-
+    
+    fclk_out <= fclk_int;
+    
 end Behavioral;
 
 
