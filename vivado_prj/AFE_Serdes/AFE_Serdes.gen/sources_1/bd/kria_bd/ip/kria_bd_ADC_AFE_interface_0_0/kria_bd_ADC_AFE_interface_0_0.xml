@@ -79,7 +79,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Feb 02 04:31:58 UTC 2025</spirit:value>
+            <spirit:value>Sun Feb 02 04:50:17 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -111,7 +111,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Feb 02 04:31:58 UTC 2025</spirit:value>
+            <spirit:value>Sun Feb 02 04:50:17 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
@@ -218,10 +218,10 @@
       </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
-      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="signed">
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
         <spirit:name>dclk_period</spirit:name>
         <spirit:displayName>Dclk Period</spirit:displayName>
-        <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.dclk_period">10</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.dclk_period">10</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -248,7 +248,7 @@
     <spirit:parameter>
       <spirit:name>dclk_period</spirit:name>
       <spirit:displayName>Dclk Period</spirit:displayName>
-      <spirit:value spirit:format="float" spirit:resolve="user" spirit:id="PARAM_VALUE.dclk_period">10</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.dclk_period">10</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>

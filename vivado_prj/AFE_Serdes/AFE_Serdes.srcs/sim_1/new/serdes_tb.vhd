@@ -17,7 +17,7 @@ end serdes_tb;
 architecture Behavioral of serdes_tb is
 
     component ADC_AFE_interface is
-    generic (dclk_period      : real  := 10.0); -- Input clock period (DCLK) in ns to ps resolution (i.e. 33.333 is 30 MHz). 7.14 ns 
+    generic (dclk_period      : integer  := 10); -- Input clock period (DCLK) in ns to ps resolution (i.e. 33.333 is 30 MHz). 7.14 ns 
     Port (
             fclk_p      : in  std_logic;
             fclk_n      : in  std_logic;
@@ -40,7 +40,7 @@ architecture Behavioral of serdes_tb is
 begin
 
     ADC: ADC_AFE_interface 
-          generic map (dclk_period => 10.0) -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
+          generic map (dclk_period => 10) -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
           Port map (
                     fclk_p     => FCLK_P,
                     fclk_n     => FCLK_N,

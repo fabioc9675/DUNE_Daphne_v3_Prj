@@ -70,7 +70,7 @@ ARCHITECTURE kria_bd_ADC_AFE_interface_0_0_arch OF kria_bd_ADC_AFE_interface_0_0
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF kria_bd_ADC_AFE_interface_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT ADC_AFE_interface IS
     GENERIC (
-      dclk_period : SIGNED
+      dclk_period : INTEGER
     );
     PORT (
       fclk_p : IN STD_LOGIC;
@@ -97,7 +97,7 @@ ARCHITECTURE kria_bd_ADC_AFE_interface_0_0_arch OF kria_bd_ADC_AFE_interface_0_0
 BEGIN
   U0 : ADC_AFE_interface
     GENERIC MAP (
-      dclk_period => 
+      dclk_period => 10
     )
     PORT MAP (
       fclk_p => fclk_p,

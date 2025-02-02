@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="8,370.253 ns"></ZoomStartTime>
-      <ZoomEndTime time="8,903.172 ns"></ZoomEndTime>
-      <Cursor1Time time="11,000.000 ns"></Cursor1Time>
+      <ZoomStartTime time="3,663.628 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,152.797 ns"></ZoomEndTime>
+      <Cursor1Time time="3,811.280 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="210"></NameColumnWidth>
-      <ValueColumnWidth column_width="97"></ValueColumnWidth>
+      <ValueColumnWidth column_width="89"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="9" />
    <wvobject fp_name="/serdes_tb/FCLK_P" type="logic">
