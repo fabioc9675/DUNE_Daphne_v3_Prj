@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "kria_bd_ADQ_DataFifo_0_0",
-    "cell_name": "ADQ_DataFifo_Sine",
+    "cell_name": "Axi_DMA/ADQ_DataFifo_Sine",
     "component_reference": "fabian.castano:Dune:ADQ_DataFifo:1.0",
     "ip_revision": "1",
     "gen_directory": "../../../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ip/kria_bd_ADQ_DataFifo_0_0",

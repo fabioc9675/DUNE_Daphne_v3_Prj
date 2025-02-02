@@ -2,7 +2,7 @@
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
     "xci_name": "kria_bd_axi_dma_0_0",
-    "cell_name": "axi_dma_sine",
+    "cell_name": "Axi_DMA/axi_dma_sine",
     "component_reference": "xilinx.com:ip:axi_dma:7.1",
     "ip_revision": "28",
     "gen_directory": "../../../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ip/kria_bd_axi_dma_0_0",

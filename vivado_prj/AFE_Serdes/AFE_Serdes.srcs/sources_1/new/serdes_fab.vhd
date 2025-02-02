@@ -30,7 +30,7 @@ begin
     serdes: process (clk, rst)
         begin
             if rst = '1' then
-                Q <= "000000";
+                Q <= "0000000";
                 counter <= 0;
                 ack <= '0';
             elsif rising_edge(clk) then

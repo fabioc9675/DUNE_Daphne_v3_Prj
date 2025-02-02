@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Sat Feb  1 22:26:34 2025
+--Date        : Sat Feb  1 23:31:54 2025
 --Host        : fabiancastano running 64-bit major release  (build 9200)
 --Command     : generate_target kria_bd.bd
 --Design      : kria_bd
@@ -532,8 +532,8 @@ architecture STRUCTURE of Clock_Generator_imp_E5XFG0 is
     clk_in1 : in STD_LOGIC;
     clk_out1 : out STD_LOGIC;
     clk_out2 : out STD_LOGIC;
-    locked : out STD_LOGIC;
-    clk_out3 : out STD_LOGIC
+    clk_out3 : out STD_LOGIC;
+    locked : out STD_LOGIC
   );
   end component kria_bd_clk_wiz_0_0;
   component kria_bd_proc_sys_reset_2_0 is
@@ -3606,24 +3606,6 @@ architecture STRUCTURE of kria_bd is
     S00_AXI_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     S00_AXI_bvalid : out STD_LOGIC;
     S00_AXI_bready : in STD_LOGIC;
-    M00_AXI_awaddr : out STD_LOGIC_VECTOR ( 48 downto 0 );
-    M00_AXI_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    M00_AXI_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M00_AXI_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    M00_AXI_awlock : out STD_LOGIC_VECTOR ( 0 to 0 );
-    M00_AXI_awcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M00_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M00_AXI_awqos : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M00_AXI_awvalid : out STD_LOGIC;
-    M00_AXI_awready : in STD_LOGIC;
-    M00_AXI_wdata : out STD_LOGIC_VECTOR ( 127 downto 0 );
-    M00_AXI_wstrb : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    M00_AXI_wlast : out STD_LOGIC;
-    M00_AXI_wvalid : out STD_LOGIC;
-    M00_AXI_wready : in STD_LOGIC;
-    M00_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M00_AXI_bvalid : in STD_LOGIC;
-    M00_AXI_bready : out STD_LOGIC;
     S01_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     S01_AXI_awlen : in STD_LOGIC_VECTOR ( 7 downto 0 );
     S01_AXI_awsize : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -3641,7 +3623,25 @@ architecture STRUCTURE of kria_bd is
     S01_AXI_wready : out STD_LOGIC;
     S01_AXI_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     S01_AXI_bvalid : out STD_LOGIC;
-    S01_AXI_bready : in STD_LOGIC
+    S01_AXI_bready : in STD_LOGIC;
+    M00_AXI_awaddr : out STD_LOGIC_VECTOR ( 48 downto 0 );
+    M00_AXI_awlen : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    M00_AXI_awsize : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M00_AXI_awburst : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    M00_AXI_awlock : out STD_LOGIC_VECTOR ( 0 to 0 );
+    M00_AXI_awcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M00_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M00_AXI_awqos : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M00_AXI_awvalid : out STD_LOGIC;
+    M00_AXI_awready : in STD_LOGIC;
+    M00_AXI_wdata : out STD_LOGIC_VECTOR ( 127 downto 0 );
+    M00_AXI_wstrb : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    M00_AXI_wlast : out STD_LOGIC;
+    M00_AXI_wvalid : out STD_LOGIC;
+    M00_AXI_wready : in STD_LOGIC;
+    M00_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M00_AXI_bvalid : in STD_LOGIC;
+    M00_AXI_bready : out STD_LOGIC
   );
   end component kria_bd_axi_smc_0;
   component kria_bd_ADC_AFE_interface_0_0 is
