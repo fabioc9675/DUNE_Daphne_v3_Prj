@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Feb  1 23:50:17 2025" VIVADOVERSION="2022.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Feb  2 18:31:07 2025" VIVADOVERSION="2022.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:kr260_som:part0:1.1" DEVICE="xck26" NAME="kria_bd" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -74,19 +74,9 @@
         <CONNECTION INSTANCE="ADC_AFE_interface_0" PORT="fclk_p"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="fclk_n_in" SIGIS="undef" SIGNAME="External_Ports_fclk_n_in">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ADC_AFE_interface_0" PORT="fclk_n"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="data_p_in" SIGIS="undef" SIGNAME="External_Ports_data_p_in">
       <CONNECTIONS>
         <CONNECTION INSTANCE="ADC_AFE_interface_0" PORT="data_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="data_n_in" SIGIS="undef" SIGNAME="External_Ports_data_n_in">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ADC_AFE_interface_0" PORT="data_n"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -119,7 +109,7 @@
     <MODULE COREREVISION="1" FULLNAME="/ADC_AFE_interface_0" HWVERSION="1.0" INSTANCE="ADC_AFE_interface_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ADC_AFE_interface" VLNV="xilinx.com:module_ref:ADC_AFE_interface:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="dclk_period" VALUE="10"/>
+        <PARAMETER NAME="dclk_period" VALUE="8"/>
         <PARAMETER NAME="Component_Name" VALUE="kria_bd_ADC_AFE_interface_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -127,11 +117,6 @@
         <PORT DIR="I" NAME="fclk_p" SIGIS="undef" SIGNAME="External_Ports_fclk_p_in">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="fclk_p_in"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="fclk_n" SIGIS="undef" SIGNAME="External_Ports_fclk_n_in">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="fclk_n_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="rst" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="xlconstant_0_dout">
@@ -142,11 +127,6 @@
         <PORT DIR="I" NAME="data_p" SIGIS="undef" SIGNAME="External_Ports_data_p_in">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="data_p_in"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="data_n" SIGIS="undef" SIGNAME="External_Ports_data_n_in">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="data_n_in"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="fclk_out" SIGIS="undef" SIGNAME="ADC_AFE_interface_0_fclk_out">

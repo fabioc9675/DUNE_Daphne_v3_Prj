@@ -15,7 +15,7 @@ library UNISIM;
 use UNISIM.VComponents.ALL;
 
 entity adc_lowFreq is
-    generic (dclk_period    :  integer  := 10);  -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
+    generic (dclk_period    :  integer  := 8);  -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
     Port (
             fclk       : in  std_logic;
             rst        : in  std_logic;

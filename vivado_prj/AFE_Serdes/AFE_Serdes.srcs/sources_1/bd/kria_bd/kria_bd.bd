@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xFC44C8C8FDF60F6C",
+      "boundary_crc": "0xC24422DF8F0E53D6",
       "device": "xck26-sfvc784-2LV-c",
       "gen_directory": "../../../../AFE_Serdes.gen/sources_1/bd/kria_bd",
       "name": "kria_bd",
@@ -150,13 +150,7 @@
       "fclk_p_in": {
         "direction": "I"
       },
-      "fclk_n_in": {
-        "direction": "I"
-      },
       "data_p_in": {
-        "direction": "I"
-      },
-      "data_n_in": {
         "direction": "I"
       }
     },
@@ -5085,17 +5079,11 @@
           "fclk_p": {
             "direction": "I"
           },
-          "fclk_n": {
-            "direction": "I"
-          },
           "rst": {
             "type": "rst",
             "direction": "I"
           },
           "data_p": {
-            "direction": "I"
-          },
-          "data_n": {
             "direction": "I"
           },
           "fclk_out": {
@@ -5272,22 +5260,10 @@
           "ps8_0_axi_periph/M06_ACLK"
         ]
       },
-      "data_n_0_1": {
-        "ports": [
-          "data_n_in",
-          "ADC_AFE_interface_0/data_n"
-        ]
-      },
       "data_p_0_1": {
         "ports": [
           "data_p_in",
           "ADC_AFE_interface_0/data_p"
-        ]
-      },
-      "fclk_n_0_1": {
-        "ports": [
-          "fclk_n_in",
-          "ADC_AFE_interface_0/fclk_n"
         ]
       },
       "fclk_p_0_1": {

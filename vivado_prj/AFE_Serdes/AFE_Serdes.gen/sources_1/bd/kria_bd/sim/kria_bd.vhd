@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Sat Feb  1 23:50:14 2025
+--Date        : Sun Feb  2 18:31:02 2025
 --Host        : fabiancastano running 64-bit major release  (build 9200)
 --Command     : generate_target kria_bd.bd
 --Design      : kria_bd
@@ -3463,10 +3463,8 @@ entity kria_bd is
     afe_pdn_rst_bus_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
     afe_pdn_rst_bus_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
     afe_pdn_rst_bus_tri_t : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    data_n_in : in STD_LOGIC;
     data_p_in : in STD_LOGIC;
     fan_en_b : out STD_LOGIC_VECTOR ( 0 to 0 );
-    fclk_n_in : in STD_LOGIC;
     fclk_p_in : in STD_LOGIC;
     uf_leds_tri_i : in STD_LOGIC_VECTOR ( 1 downto 0 );
     uf_leds_tri_o : out STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -3647,10 +3645,8 @@ architecture STRUCTURE of kria_bd is
   component kria_bd_ADC_AFE_interface_0_0 is
   port (
     fclk_p : in STD_LOGIC;
-    fclk_n : in STD_LOGIC;
     rst : in STD_LOGIC;
     data_p : in STD_LOGIC;
-    data_n : in STD_LOGIC;
     fclk_out : out STD_LOGIC;
     dataOut : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
@@ -3718,9 +3714,7 @@ architecture STRUCTURE of kria_bd is
   signal axi_smc_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal axi_smc_M00_AXI_WVALID : STD_LOGIC;
   signal clk_wiz_0_clk_out2 : STD_LOGIC;
-  signal data_n_0_1 : STD_LOGIC;
   signal data_p_0_1 : STD_LOGIC;
-  signal fclk_n_0_1 : STD_LOGIC;
   signal fclk_p_0_1 : STD_LOGIC;
   signal io1_i_0_1 : STD_LOGIC;
   signal pmod_2_GPIO_TRI_I : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -3922,10 +3916,8 @@ begin
   afe_pdn_rst_bus_tri_o(1 downto 0) <= pmod_2_GPIO_TRI_O(1 downto 0);
   afe_pdn_rst_bus_tri_t(1 downto 0) <= pmod_2_GPIO_TRI_T(1 downto 0);
   axi_gpio_0_GPIO_TRI_I(1 downto 0) <= uf_leds_tri_i(1 downto 0);
-  data_n_0_1 <= data_n_in;
   data_p_0_1 <= data_p_in;
   fan_en_b(0) <= xlslice_0_Dout(0);
-  fclk_n_0_1 <= fclk_n_in;
   fclk_p_0_1 <= fclk_p_in;
   io1_i_0_1 <= afe0_sdout;
   pmod_2_GPIO_TRI_I(1 downto 0) <= afe_pdn_rst_bus_tri_i(1 downto 0);
@@ -3935,9 +3927,7 @@ begin
 ADC_AFE_interface_0: component kria_bd_ADC_AFE_interface_0_0
      port map (
       dataOut(15 downto 0) => ADC_AFE_interface_0_dataOut(15 downto 0),
-      data_n => data_n_0_1,
       data_p => data_p_0_1,
-      fclk_n => fclk_n_0_1,
       fclk_out => ADC_AFE_interface_0_fclk_out,
       fclk_p => fclk_p_0_1,
       rst => xlconstant_0_dout(0)

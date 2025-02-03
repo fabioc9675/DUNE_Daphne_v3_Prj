@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Sat Feb  1 23:50:14 2025
+--Date        : Sun Feb  2 18:31:02 2025
 --Host        : fabiancastano running 64-bit major release  (build 9200)
 --Command     : generate_target kria_bd_wrapper.bd
 --Design      : kria_bd_wrapper
@@ -18,10 +18,8 @@ entity kria_bd_wrapper is
     afe0_sdout : in STD_LOGIC;
     afe_gpio_ctrl_tri_io : inout STD_LOGIC_VECTOR ( 0 to 0 );
     afe_pdn_rst_bus_tri_io : inout STD_LOGIC_VECTOR ( 1 downto 0 );
-    data_n_in : in STD_LOGIC;
     data_p_in : in STD_LOGIC;
     fan_en_b : out STD_LOGIC_VECTOR ( 0 to 0 );
-    fclk_n_in : in STD_LOGIC;
     fclk_p_in : in STD_LOGIC;
     uf_leds_tri_io : inout STD_LOGIC_VECTOR ( 1 downto 0 )
   );
@@ -44,9 +42,7 @@ architecture STRUCTURE of kria_bd_wrapper is
     afe0_sdout : in STD_LOGIC;
     fan_en_b : out STD_LOGIC_VECTOR ( 0 to 0 );
     fclk_p_in : in STD_LOGIC;
-    fclk_n_in : in STD_LOGIC;
-    data_p_in : in STD_LOGIC;
-    data_n_in : in STD_LOGIC
+    data_p_in : in STD_LOGIC
   );
   end component kria_bd;
   component IOBUF is
@@ -113,10 +109,8 @@ kria_bd_i: component kria_bd
       afe_pdn_rst_bus_tri_o(0) => afe_pdn_rst_bus_tri_o_0(0),
       afe_pdn_rst_bus_tri_t(1) => afe_pdn_rst_bus_tri_t_1(1),
       afe_pdn_rst_bus_tri_t(0) => afe_pdn_rst_bus_tri_t_0(0),
-      data_n_in => data_n_in,
       data_p_in => data_p_in,
       fan_en_b(0) => fan_en_b(0),
-      fclk_n_in => fclk_n_in,
       fclk_p_in => fclk_p_in,
       uf_leds_tri_i(1) => uf_leds_tri_i_1(1),
       uf_leds_tri_i(0) => uf_leds_tri_i_0(0),

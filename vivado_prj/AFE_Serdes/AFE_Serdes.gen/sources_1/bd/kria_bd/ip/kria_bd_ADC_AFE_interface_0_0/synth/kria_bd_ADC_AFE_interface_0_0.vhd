@@ -56,10 +56,8 @@ USE ieee.numeric_std.ALL;
 ENTITY kria_bd_ADC_AFE_interface_0_0 IS
   PORT (
     fclk_p : IN STD_LOGIC;
-    fclk_n : IN STD_LOGIC;
     rst : IN STD_LOGIC;
     data_p : IN STD_LOGIC;
-    data_n : IN STD_LOGIC;
     fclk_out : OUT STD_LOGIC;
     dataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
@@ -74,10 +72,8 @@ ARCHITECTURE kria_bd_ADC_AFE_interface_0_0_arch OF kria_bd_ADC_AFE_interface_0_0
     );
     PORT (
       fclk_p : IN STD_LOGIC;
-      fclk_n : IN STD_LOGIC;
       rst : IN STD_LOGIC;
       data_p : IN STD_LOGIC;
-      data_n : IN STD_LOGIC;
       fclk_out : OUT STD_LOGIC;
       dataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
@@ -87,7 +83,7 @@ ARCHITECTURE kria_bd_ADC_AFE_interface_0_0_arch OF kria_bd_ADC_AFE_interface_0_0
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF kria_bd_ADC_AFE_interface_0_0_arch : ARCHITECTURE IS "kria_bd_ADC_AFE_interface_0_0,ADC_AFE_interface,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF kria_bd_ADC_AFE_interface_0_0_arch: ARCHITECTURE IS "kria_bd_ADC_AFE_interface_0_0,ADC_AFE_interface,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=ADC_AFE_interface,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,dclk_period=10}";
+  ATTRIBUTE CORE_GENERATION_INFO OF kria_bd_ADC_AFE_interface_0_0_arch: ARCHITECTURE IS "kria_bd_ADC_AFE_interface_0_0,ADC_AFE_interface,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=ADC_AFE_interface,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,dclk_period=8}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF kria_bd_ADC_AFE_interface_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -97,14 +93,12 @@ ARCHITECTURE kria_bd_ADC_AFE_interface_0_0_arch OF kria_bd_ADC_AFE_interface_0_0
 BEGIN
   U0 : ADC_AFE_interface
     GENERIC MAP (
-      dclk_period => 10
+      dclk_period => 8
     )
     PORT MAP (
       fclk_p => fclk_p,
-      fclk_n => fclk_n,
       rst => rst,
       data_p => data_p,
-      data_n => data_n,
       fclk_out => fclk_out,
       dataOut => dataOut
     );

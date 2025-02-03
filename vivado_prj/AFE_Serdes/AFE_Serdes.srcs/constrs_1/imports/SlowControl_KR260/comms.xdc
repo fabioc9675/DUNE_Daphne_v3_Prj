@@ -32,15 +32,16 @@ set_property IOSTANDARD LVCMOS33 [get_ports {afe0_sclk}]
 set_property PACKAGE_PIN F12 [get_ports {fclk_p_in}]                          ;# AFE FCLK_P pin
 set_property IOSTANDARD LVCMOS33 [get_ports {fclk_p_in}]
 
-set_property PACKAGE_PIN K13 [get_ports {fclk_n_in}]                          ;# AFE FCLK_N pin
-set_property IOSTANDARD LVCMOS33 [get_ports {fclk_n_in}]
+#set_property PACKAGE_PIN K13 [get_ports {fclk_n_in}]                          ;# AFE FCLK_N pin
+#set_property IOSTANDARD LVCMOS33 [get_ports {fclk_n_in}]
 
 set_property PACKAGE_PIN AD10 [get_ports {data_p_in}]                         ;# AFE DATA_P pin
 set_property IOSTANDARD LVCMOS33 [get_ports {data_p_in}]
 
-set_property PACKAGE_PIN AD12 [get_ports {data_n_in}]                         ;# AFE DATA_N pin
-set_property IOSTANDARD LVCMOS33 [get_ports {data_p_in}]
+#set_property PACKAGE_PIN AD12 [get_ports {data_n_in}]                         ;# AFE DATA_N pin
+#set_property IOSTANDARD LVCMOS33 [get_ports {data_p_in}]
 
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets kria_bd_i/ADC_AFE_interface_0/U0/IBUF_fclk_p/O]
 
 
 
