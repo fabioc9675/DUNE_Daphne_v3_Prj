@@ -108,3 +108,4 @@
 #set_property IOSTANDARD LVCMOS33 [get_ports {pmod4_io_tri_io[7]}]
 
 
+

@@ -62,7 +62,7 @@ begin
     -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     adc_lowf: adc_lowFreq
-        --generic map (dclk_period => dclk_period)
+        generic map (dclk_period => dclk_period)
         Port map (
                     fclk      => fclk_int,
                     rst       => rst,

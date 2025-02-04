@@ -16,5 +16,8 @@ vhdl xil_defaultlib  \
 "../../../bd/kria_bd/ip/kria_bd_axi_dma_afe_0/sim/kria_bd_axi_dma_afe_0.vhd" \
 "../../../bd/kria_bd/ip/kria_bd_ADC_AFE_interface_0_0/sim/kria_bd_ADC_AFE_interface_0_0.vhd" \
 "../../../bd/kria_bd/sim/kria_bd.vhd" \
+"../../../bd/kria_bd/ip/kria_bd_ADQ_DataFifo_AFE_0/sim/kria_bd_ADQ_DataFifo_AFE_0.vhd" \
+"../../../bd/kria_bd/ip/kria_bd_axi_dma_afe_1/sim/kria_bd_axi_dma_afe_1.vhd" \
+"../../../bd/kria_bd/ip/kria_bd_ADC_AFE_Diff_interfa_0_0/sim/kria_bd_ADC_AFE_Diff_interfa_0_0.vhd" \
 
 nosort

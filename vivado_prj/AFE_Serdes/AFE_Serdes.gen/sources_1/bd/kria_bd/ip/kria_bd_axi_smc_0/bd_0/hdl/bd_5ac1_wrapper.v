@@ -61,6 +61,24 @@ module bd_5ac1_wrapper
     S01_AXI_wready,
     S01_AXI_wstrb,
     S01_AXI_wvalid,
+    S02_AXI_awaddr,
+    S02_AXI_awburst,
+    S02_AXI_awcache,
+    S02_AXI_awlen,
+    S02_AXI_awlock,
+    S02_AXI_awprot,
+    S02_AXI_awqos,
+    S02_AXI_awready,
+    S02_AXI_awsize,
+    S02_AXI_awvalid,
+    S02_AXI_bready,
+    S02_AXI_bresp,
+    S02_AXI_bvalid,
+    S02_AXI_wdata,
+    S02_AXI_wlast,
+    S02_AXI_wready,
+    S02_AXI_wstrb,
+    S02_AXI_wvalid,
     aclk,
     aresetn);
   output [48:0]M00_AXI_awaddr;
@@ -117,6 +135,24 @@ module bd_5ac1_wrapper
   output S01_AXI_wready;
   input [3:0]S01_AXI_wstrb;
   input S01_AXI_wvalid;
+  input [31:0]S02_AXI_awaddr;
+  input [1:0]S02_AXI_awburst;
+  input [3:0]S02_AXI_awcache;
+  input [7:0]S02_AXI_awlen;
+  input [0:0]S02_AXI_awlock;
+  input [2:0]S02_AXI_awprot;
+  input [3:0]S02_AXI_awqos;
+  output S02_AXI_awready;
+  input [2:0]S02_AXI_awsize;
+  input S02_AXI_awvalid;
+  input S02_AXI_bready;
+  output [1:0]S02_AXI_bresp;
+  output S02_AXI_bvalid;
+  input [31:0]S02_AXI_wdata;
+  input S02_AXI_wlast;
+  output S02_AXI_wready;
+  input [3:0]S02_AXI_wstrb;
+  input S02_AXI_wvalid;
   input aclk;
   input aresetn;
 
@@ -174,6 +210,24 @@ module bd_5ac1_wrapper
   wire S01_AXI_wready;
   wire [3:0]S01_AXI_wstrb;
   wire S01_AXI_wvalid;
+  wire [31:0]S02_AXI_awaddr;
+  wire [1:0]S02_AXI_awburst;
+  wire [3:0]S02_AXI_awcache;
+  wire [7:0]S02_AXI_awlen;
+  wire [0:0]S02_AXI_awlock;
+  wire [2:0]S02_AXI_awprot;
+  wire [3:0]S02_AXI_awqos;
+  wire S02_AXI_awready;
+  wire [2:0]S02_AXI_awsize;
+  wire S02_AXI_awvalid;
+  wire S02_AXI_bready;
+  wire [1:0]S02_AXI_bresp;
+  wire S02_AXI_bvalid;
+  wire [31:0]S02_AXI_wdata;
+  wire S02_AXI_wlast;
+  wire S02_AXI_wready;
+  wire [3:0]S02_AXI_wstrb;
+  wire S02_AXI_wvalid;
   wire aclk;
   wire aresetn;
 
@@ -232,6 +286,24 @@ module bd_5ac1_wrapper
         .S01_AXI_wready(S01_AXI_wready),
         .S01_AXI_wstrb(S01_AXI_wstrb),
         .S01_AXI_wvalid(S01_AXI_wvalid),
+        .S02_AXI_awaddr(S02_AXI_awaddr),
+        .S02_AXI_awburst(S02_AXI_awburst),
+        .S02_AXI_awcache(S02_AXI_awcache),
+        .S02_AXI_awlen(S02_AXI_awlen),
+        .S02_AXI_awlock(S02_AXI_awlock),
+        .S02_AXI_awprot(S02_AXI_awprot),
+        .S02_AXI_awqos(S02_AXI_awqos),
+        .S02_AXI_awready(S02_AXI_awready),
+        .S02_AXI_awsize(S02_AXI_awsize),
+        .S02_AXI_awvalid(S02_AXI_awvalid),
+        .S02_AXI_bready(S02_AXI_bready),
+        .S02_AXI_bresp(S02_AXI_bresp),
+        .S02_AXI_bvalid(S02_AXI_bvalid),
+        .S02_AXI_wdata(S02_AXI_wdata),
+        .S02_AXI_wlast(S02_AXI_wlast),
+        .S02_AXI_wready(S02_AXI_wready),
+        .S02_AXI_wstrb(S02_AXI_wstrb),
+        .S02_AXI_wvalid(S02_AXI_wvalid),
         .aclk(aclk),
         .aresetn(aresetn));
 endmodule

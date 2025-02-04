@@ -53,7 +53,7 @@
 (* X_CORE_INFO = "sc_axi2sc_v1_0_8_top,Vivado 2022.2" *)
 (* CHECK_LICENSE_TYPE = "bd_5ac1_s01a2s_0,sc_axi2sc_v1_0_8_top,{}" *)
 (* CORE_GENERATION_INFO = "bd_5ac1_s01a2s_0,sc_axi2sc_v1_0_8_top,{x_ipProduct=Vivado 2022.2,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=sc_axi2sc,x_ipVersion=1.0,x_ipCoreRevision=8,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_AXI_ADDR_WIDTH=32,C_AXI_ID_WIDTH=2,C_AXI_RDATA_WIDTH=32,C_AXI_WDATA_WIDTH=32,C_SC_ADDR_WIDTH=32,C_SC_ID_WIDTH=2,C_SC_RDATA_WIDTH=128,C_SC_WDATA_WIDTH=128,C_SC_RUSER_BITS_PER_BYTE=0,C_SC_WUSER_BITS_PER_BYTE=0,C_SC_ARUSER_WIDTH=0,C_SC_AWUSER_WIDTH=0,C_SC_BUSER_WIDTH=0,C_MSC_ROUTE_WIDTH=1,C_SSC_ROUTE_WID\
-TH=2,C_AWPAYLD_WIDTH=140,C_ARPAYLD_WIDTH=140,C_WPAYLD_WIDTH=160,C_RPAYLD_WIDTH=149,C_BPAYLD_WIDTH=7}" *)
+TH=3,C_AWPAYLD_WIDTH=140,C_ARPAYLD_WIDTH=140,C_WPAYLD_WIDTH=160,C_RPAYLD_WIDTH=150,C_BPAYLD_WIDTH=8}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_5ac1_s01a2s_0 (
   aclk,
@@ -107,7 +107,7 @@ input wire s_sc_b_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_B RECV" *)
 output wire s_sc_b_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_B PAYLD" *)
-input wire [6 : 0] s_sc_b_payld;
+input wire [7 : 0] s_sc_b_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AW REQ" *)
 output wire m_sc_aw_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_AW INFO" *)
@@ -188,19 +188,19 @@ input wire s_axi_bready;
     .C_SC_AWUSER_WIDTH(0),
     .C_SC_BUSER_WIDTH(0),
     .C_MSC_ROUTE_WIDTH(1),
-    .C_SSC_ROUTE_WIDTH(2),
+    .C_SSC_ROUTE_WIDTH(3),
     .C_AWPAYLD_WIDTH(140),
     .C_ARPAYLD_WIDTH(140),
     .C_WPAYLD_WIDTH(160),
-    .C_RPAYLD_WIDTH(149),
-    .C_BPAYLD_WIDTH(7)
+    .C_RPAYLD_WIDTH(150),
+    .C_BPAYLD_WIDTH(8)
   ) inst (
     .aclk(aclk),
     .s_sc_r_req(1'D0),
     .s_sc_r_info(1'D0),
     .s_sc_r_send(1'D0),
     .s_sc_r_recv(),
-    .s_sc_r_payld(149'D0),
+    .s_sc_r_payld(150'D0),
     .s_sc_b_req(s_sc_b_req),
     .s_sc_b_info(s_sc_b_info),
     .s_sc_b_send(s_sc_b_send),

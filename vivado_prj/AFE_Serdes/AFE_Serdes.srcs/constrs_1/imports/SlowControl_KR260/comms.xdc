@@ -29,20 +29,30 @@ set_property IOSTANDARD LVCMOS33 [get_ports {afe0_sclk}]
 
 
 ###################### AFE_CH1 ############################
-set_property PACKAGE_PIN F12 [get_ports {fclk_p_in}]                          ;# AFE FCLK_P pin
-set_property IOSTANDARD LVCMOS33 [get_ports {fclk_p_in}]
+set_property PACKAGE_PIN F12 [get_ports {fclk_in}]                          ;# AFE FCLK_P pin
+set_property IOSTANDARD LVCMOS33 [get_ports {fclk_in}]
 
-#set_property PACKAGE_PIN K13 [get_ports {fclk_n_in}]                          ;# AFE FCLK_N pin
-#set_property IOSTANDARD LVCMOS33 [get_ports {fclk_n_in}]
-
-set_property PACKAGE_PIN AD10 [get_ports {data_p_in}]                         ;# AFE DATA_P pin
-set_property IOSTANDARD LVCMOS33 [get_ports {data_p_in}]
-
-#set_property PACKAGE_PIN AD12 [get_ports {data_n_in}]                         ;# AFE DATA_N pin
-#set_property IOSTANDARD LVCMOS33 [get_ports {data_p_in}]
+set_property PACKAGE_PIN AD10 [get_ports {data_in}]                         ;# AFE DATA_P pin
+set_property IOSTANDARD LVCMOS33 [get_ports {data_in}]
 
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets kria_bd_i/ADC_AFE_interface_0/U0/IBUF_fclk_p/O]
+set_property CLOCK_DEDICATED_ROUTE BACKBONE [get_nets kria_bd_i/ADC_AFE_interface_0/fclk_out]
 
+
+###################### AFE_CH1 DIFFERENTIAL LVDS ############################
+set_property PACKAGE_PIN AE15 [get_ports {fclk_in_p}]                          ;# AFE FCLK_P pin
+set_property IOSTANDARD DIFF_HSTL_I_18 [get_ports {fclk_in_p}]
+set_property PACKAGE_PIN AE14 [get_ports {fclk_in_n}]                          ;# AFE FCLK_N pin
+set_property IOSTANDARD DIFF_HSTL_I_18 [get_ports {fclk_in_n}]
+#set_property DIFF_TERM TRUE [get_ports fclk_in_p]
+
+set_property PACKAGE_PIN W14 [get_ports {data_in_p}]                          ;# AFE DATA_P pin
+set_property IOSTANDARD DIFF_HSTL_I_18 [get_ports {data_in_p}]
+set_property PACKAGE_PIN W13 [get_ports {data_in_n}]                          ;# AFE DATA_N pin
+set_property IOSTANDARD DIFF_HSTL_I_18 [get_ports {data_in_n}]
+#set_property DIFF_TERM TRUE [get_ports data_in_p]
+
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets kria_bd_i/ADC_AFE_Diff_interfa_0/U0/IBUFDS_fclk/O] 
 
 
 ##################### AFE1_AFE2_SPI Interface ##############################
