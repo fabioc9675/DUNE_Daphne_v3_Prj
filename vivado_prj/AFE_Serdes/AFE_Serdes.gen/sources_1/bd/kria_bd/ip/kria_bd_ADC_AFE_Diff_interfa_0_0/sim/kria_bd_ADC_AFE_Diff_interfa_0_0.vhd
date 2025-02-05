@@ -69,9 +69,6 @@ ARCHITECTURE kria_bd_ADC_AFE_Diff_interfa_0_0_arch OF kria_bd_ADC_AFE_Diff_inter
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF kria_bd_ADC_AFE_Diff_interfa_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT ADC_AFE_Diff_interface IS
-    GENERIC (
-      dclk_period : INTEGER
-    );
     PORT (
       fclk_p : IN STD_LOGIC;
       fclk_n : IN STD_LOGIC;
@@ -88,9 +85,6 @@ ARCHITECTURE kria_bd_ADC_AFE_Diff_interfa_0_0_arch OF kria_bd_ADC_AFE_Diff_inter
   ATTRIBUTE X_INTERFACE_INFO OF rst: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
 BEGIN
   U0 : ADC_AFE_Diff_interface
-    GENERIC MAP (
-      dclk_period => 8
-    )
     PORT MAP (
       fclk_p => fclk_p,
       fclk_n => fclk_n,

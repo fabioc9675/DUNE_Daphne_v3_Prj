@@ -8,11 +8,7 @@
     "gen_directory": "../../../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ip/kria_bd_ADC_AFE_interface_0_0",
     "parameters": {
       "component_parameters": {
-        "dclk_period": [ { "value": "8", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "Component_Name": [ { "value": "kria_bd_ADC_AFE_interface_0_0", "resolve_type": "user", "usage": "all" } ]
-      },
-      "model_parameters": {
-        "dclk_period": [ { "value": "8", "resolve_type": "generated", "format": "long", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynquplus" } ],

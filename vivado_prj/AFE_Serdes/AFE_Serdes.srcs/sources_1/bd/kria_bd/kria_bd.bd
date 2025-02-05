@@ -53,12 +53,12 @@
         "ADQ_DataFifo_AFE": "",
         "axi_dma_afe": ""
       },
-      "sine_wave_gen_0": "",
-      "ADC_AFE_interface_0": "",
       "AXI_DMA_Real_Diff": {
         "ADQ_DataFifo_AFE_Diff": "",
         "axi_dma_afe_diff": ""
       },
+      "sine_wave_gen_0": "",
+      "ADC_AFE_interface_0": "",
       "ADC_AFE_Diff_interfa_0": ""
     },
     "interface_ports": {
@@ -5160,81 +5160,6 @@
           }
         }
       },
-      "sine_wave_gen_0": {
-        "vlnv": "xilinx.com:module_ref:sine_wave_gen:1.0",
-        "xci_name": "kria_bd_sine_wave_gen_0_0",
-        "xci_path": "ip\\kria_bd_sine_wave_gen_0_0\\kria_bd_sine_wave_gen_0_0.xci",
-        "inst_hier_path": "sine_wave_gen_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "sine_wave_gen",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "19999800",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "kria_bd_clk_wiz_0_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "sine_out": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
-      "ADC_AFE_interface_0": {
-        "vlnv": "xilinx.com:module_ref:ADC_AFE_interface:1.0",
-        "xci_name": "kria_bd_ADC_AFE_interface_0_0",
-        "xci_path": "ip\\kria_bd_ADC_AFE_interface_0_0\\kria_bd_ADC_AFE_interface_0_0.xci",
-        "inst_hier_path": "ADC_AFE_interface_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ADC_AFE_interface",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "fclk_p": {
-            "direction": "I"
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "data_p": {
-            "direction": "I"
-          },
-          "fclk_out": {
-            "direction": "O"
-          },
-          "dataOut": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
       "AXI_DMA_Real_Diff": {
         "interface_ports": {
           "M_AXI_S2MM": {
@@ -5376,6 +5301,81 @@
               "ADQ_DataFifo_AFE_Diff/m00_axis_aresetn",
               "axi_dma_afe_diff/axi_resetn"
             ]
+          }
+        }
+      },
+      "sine_wave_gen_0": {
+        "vlnv": "xilinx.com:module_ref:sine_wave_gen:1.0",
+        "xci_name": "kria_bd_sine_wave_gen_0_0",
+        "xci_path": "ip\\kria_bd_sine_wave_gen_0_0\\kria_bd_sine_wave_gen_0_0.xci",
+        "inst_hier_path": "sine_wave_gen_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sine_wave_gen",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "19999800",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "kria_bd_clk_wiz_0_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "sine_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "ADC_AFE_interface_0": {
+        "vlnv": "xilinx.com:module_ref:ADC_AFE_interface:1.0",
+        "xci_name": "kria_bd_ADC_AFE_interface_0_0",
+        "xci_path": "ip\\kria_bd_ADC_AFE_interface_0_0\\kria_bd_ADC_AFE_interface_0_0.xci",
+        "inst_hier_path": "ADC_AFE_interface_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ADC_AFE_interface",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "fclk_p": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data_p": {
+            "direction": "I"
+          },
+          "fclk_out": {
+            "direction": "O"
+          },
+          "dataOut": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
           }
         }
       },

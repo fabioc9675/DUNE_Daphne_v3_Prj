@@ -15,7 +15,7 @@ library UNISIM;
 use UNISIM.VComponents.ALL;
 
 entity adc_lowFreq is
-    generic (dclk_period    :  integer  := 8);  -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
+    --generic (dclk_period    :  integer  := 7);  -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
     Port (
             fclk       : in  std_logic;
             rst        : in  std_logic;
@@ -71,7 +71,7 @@ begin
         BANDWIDTH => "OPTIMIZED",  -- Jitter programming (OPTIMIZED, HIGH, LOW)
         CLKFBOUT_MULT_F => 7.0,    -- Multiply value for all CLKOUT (2.000-64.000).
         CLKFBOUT_PHASE => 0.0,     -- Phase offset in degrees of CLKFB (-360.000-360.000).
-        CLKIN1_PERIOD => real(dclk_period),      -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
+        CLKIN1_PERIOD => 5.714,    -- for 40 MHz FCLK; real(dclk_period),      -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
         -- CLKOUT0_DIVIDE - CLKOUT6_DIVIDE: Divide amount for each CLKOUT (1-128)
         CLKOUT1_DIVIDE => 2,
         CLKOUT2_DIVIDE => 1,

@@ -14,7 +14,7 @@ use UNISIM.VComponents.ALL;
 
 
 entity ADC_AFE_interface is
-    generic (dclk_period      : integer  := 8); -- Input clock period (DCLK) in ns to ps resolution (i.e. 33.333 is 30 MHz). 7.14 ns 
+    -- generic (dclk_period      : integer  := 8); -- Input clock period (DCLK) in ns to ps resolution (i.e. 33.333 is 30 MHz). 7.14 ns 
     Port (
             fclk_p      : in  std_logic;
 --            fclk_n      : in  std_logic;
@@ -29,7 +29,7 @@ end ADC_AFE_interface;
 architecture Behavioral of ADC_AFE_interface is
 
     component adc_lowFreq is
-        generic (dclk_period      : integer  := 8);   -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
+        -- generic (dclk_period      : integer  := 8);   -- Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
         Port (
                 fclk       : in  std_logic;
                 rst        : in  std_logic;
@@ -62,7 +62,7 @@ begin
     -- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     adc_lowf: adc_lowFreq
-        generic map (dclk_period => dclk_period)
+        -- generic map (dclk_period => dclk_period)
         Port map (
                     fclk      => fclk_int,
                     rst       => rst,

@@ -1,21 +1,21 @@
 -makelib xcelium_lib/xilinx_vip -sv \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_if.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_axi4streampc.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_axi4pc.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/xil_common_vip_pkg.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_pkg.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_pkg.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi4stream_vip_if.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/axi_vip_if.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/clk_vip_if.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/xilinx_vip/hdl/rst_vip_if.sv" \
 -endlib
 -makelib xcelium_lib/xpm -sv \
-  "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
-  "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv" \
+  "D:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv" \
 -endlib
 -makelib xcelium_lib/xpm \
-  "C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
+  "D:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd" \
 -endlib
 -makelib xcelium_lib/axi_lite_ipif_v3_0_4 \
   "../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd" \
@@ -118,9 +118,6 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/kria_bd/ip/kria_bd_xbar_0/sim/kria_bd_xbar_0.v" \
--endlib
--makelib xcelium_lib/xil_defaultlib \
-  "../../../bd/kria_bd/ip/kria_bd_sine_wave_gen_0_0/sim/kria_bd_sine_wave_gen_0_0.vhd" \
 -endlib
 -makelib xcelium_lib/xlconstant_v1_1_7 \
   "../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v" \
@@ -228,8 +225,8 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/kria_bd/ip/kria_bd_ADQ_DataFifo_Sine_1/sim/kria_bd_ADQ_DataFifo_Sine_1.vhd" \
   "../../../bd/kria_bd/ip/kria_bd_axi_dma_afe_0/sim/kria_bd_axi_dma_afe_0.vhd" \
+  "../../../bd/kria_bd/ip/kria_bd_sine_wave_gen_0_0/sim/kria_bd_sine_wave_gen_0_0.vhd" \
   "../../../bd/kria_bd/ip/kria_bd_ADC_AFE_interface_0_0/sim/kria_bd_ADC_AFE_interface_0_0.vhd" \
-  "../../../bd/kria_bd/sim/kria_bd.vhd" \
   "../../../bd/kria_bd/ip/kria_bd_ADQ_DataFifo_AFE_0/sim/kria_bd_ADQ_DataFifo_AFE_0.vhd" \
   "../../../bd/kria_bd/ip/kria_bd_axi_dma_afe_1/sim/kria_bd_axi_dma_afe_1.vhd" \
   "../../../bd/kria_bd/ip/kria_bd_ADC_AFE_Diff_interfa_0_0/sim/kria_bd_ADC_AFE_Diff_interfa_0_0.vhd" \
@@ -239,6 +236,9 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../bd/kria_bd/ip/kria_bd_auto_pc_0/sim/kria_bd_auto_pc_0.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../bd/kria_bd/sim/kria_bd.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   glbl.v

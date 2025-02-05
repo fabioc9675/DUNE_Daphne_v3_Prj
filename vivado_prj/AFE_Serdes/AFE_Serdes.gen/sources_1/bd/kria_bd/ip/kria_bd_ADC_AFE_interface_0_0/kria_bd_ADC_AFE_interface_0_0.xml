@@ -52,7 +52,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8554cc68</spirit:value>
+            <spirit:value>9:96d54ef9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -63,7 +63,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8554cc68</spirit:value>
+            <spirit:value>9:96d54ef9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -79,11 +79,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Feb 04 17:04:23 UTC 2025</spirit:value>
+            <spirit:value>Wed Feb 05 03:08:45 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:8554cc68</spirit:value>
+            <spirit:value>9:96d54ef9</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -95,7 +95,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:071ec9a9</spirit:value>
+            <spirit:value>9:9e3c6f05</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -111,11 +111,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Feb 04 17:04:23 UTC 2025</spirit:value>
+            <spirit:value>Wed Feb 05 03:08:45 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:071ec9a9</spirit:value>
+            <spirit:value>9:9e3c6f05</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -191,13 +191,6 @@
         </spirit:wire>
       </spirit:port>
     </spirit:ports>
-    <spirit:modelParameters>
-      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
-        <spirit:name>dclk_period</spirit:name>
-        <spirit:displayName>Dclk Period</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.dclk_period">8</spirit:value>
-      </spirit:modelParameter>
-    </spirit:modelParameters>
   </spirit:model>
   <spirit:fileSets>
     <spirit:fileSet>
@@ -219,11 +212,6 @@
   </spirit:fileSets>
   <spirit:description>xilinx.com:module_ref:ADC_AFE_interface:1.0</spirit:description>
   <spirit:parameters>
-    <spirit:parameter>
-      <spirit:name>dclk_period</spirit:name>
-      <spirit:displayName>Dclk Period</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.dclk_period">8</spirit:value>
-    </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">kria_bd_ADC_AFE_interface_0_0</spirit:value>

@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3,663.628 ns"></ZoomStartTime>
-      <ZoomEndTime time="4,152.797 ns"></ZoomEndTime>
-      <Cursor1Time time="3,811.280 ns"></Cursor1Time>
+      <ZoomStartTime time="8,301.967 ns"></ZoomStartTime>
+      <ZoomEndTime time="8,830.598 ns"></ZoomEndTime>
+      <Cursor1Time time="8,714.709 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="210"></NameColumnWidth>
-      <ValueColumnWidth column_width="89"></ValueColumnWidth>
+      <ValueColumnWidth column_width="85"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="9" />
    <wvobject fp_name="/serdes_tb/FCLK_P" type="logic">
@@ -56,5 +56,6 @@
       <obj_property name="ElementShortName">Data_out[15:0]</obj_property>
       <obj_property name="ObjectShortName">Data_out[15:0]</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
 </wave_config>
