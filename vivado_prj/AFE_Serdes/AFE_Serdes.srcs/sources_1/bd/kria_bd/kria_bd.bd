@@ -58,8 +58,8 @@
         "axi_dma_afe_diff": ""
       },
       "sine_wave_gen_0": "",
-      "ADC_AFE_interface_0": "",
-      "ADC_AFE_Diff_interfa_0": ""
+      "ADC_AFE_Diff_interfa_0": "",
+      "ADC_AFE_interface_0": ""
     },
     "interface_ports": {
       "afe_gpio_ctrl": {
@@ -5348,37 +5348,6 @@
           }
         }
       },
-      "ADC_AFE_interface_0": {
-        "vlnv": "xilinx.com:module_ref:ADC_AFE_interface:1.0",
-        "xci_name": "kria_bd_ADC_AFE_interface_0_0",
-        "xci_path": "ip\\kria_bd_ADC_AFE_interface_0_0\\kria_bd_ADC_AFE_interface_0_0.xci",
-        "inst_hier_path": "ADC_AFE_interface_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ADC_AFE_interface",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "fclk_p": {
-            "direction": "I"
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "data_p": {
-            "direction": "I"
-          },
-          "fclk_out": {
-            "direction": "O"
-          },
-          "dataOut": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
       "ADC_AFE_Diff_interfa_0": {
         "vlnv": "xilinx.com:module_ref:ADC_AFE_Diff_interface:1.0",
         "xci_name": "kria_bd_ADC_AFE_Diff_interfa_0_0",
@@ -5404,6 +5373,37 @@
             "direction": "I"
           },
           "data_n": {
+            "direction": "I"
+          },
+          "fclk_out": {
+            "direction": "O"
+          },
+          "dataOut": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "ADC_AFE_interface_0": {
+        "vlnv": "xilinx.com:module_ref:ADC_AFE_interface:1.0",
+        "xci_name": "kria_bd_ADC_AFE_interface_0_0",
+        "xci_path": "ip\\kria_bd_ADC_AFE_interface_0_0\\kria_bd_ADC_AFE_interface_0_0.xci",
+        "inst_hier_path": "ADC_AFE_interface_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ADC_AFE_interface",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "fclk_p": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data_p": {
             "direction": "I"
           },
           "fclk_out": {
@@ -5685,8 +5685,8 @@
         "ports": [
           "xlconstant_0/dout",
           "sine_wave_gen_0/rst",
-          "ADC_AFE_interface_0/rst",
-          "ADC_AFE_Diff_interfa_0/rst"
+          "ADC_AFE_Diff_interfa_0/rst",
+          "ADC_AFE_interface_0/rst"
         ]
       },
       "xlslice_0_Dout": {

@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
---Date        : Tue Feb  4 22:21:44 2025
+--Date        : Thu Feb  6 22:14:24 2025
 --Host        : fabiancastano running 64-bit major release  (build 9200)
 --Command     : generate_target kria_bd.bd
 --Design      : kria_bd
@@ -4131,15 +4131,6 @@ architecture STRUCTURE of kria_bd is
     sine_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component kria_bd_sine_wave_gen_0_0;
-  component kria_bd_ADC_AFE_interface_0_0 is
-  port (
-    fclk_p : in STD_LOGIC;
-    rst : in STD_LOGIC;
-    data_p : in STD_LOGIC;
-    fclk_out : out STD_LOGIC;
-    dataOut : out STD_LOGIC_VECTOR ( 15 downto 0 )
-  );
-  end component kria_bd_ADC_AFE_interface_0_0;
   component kria_bd_ADC_AFE_Diff_interfa_0_0 is
   port (
     fclk_p : in STD_LOGIC;
@@ -4151,6 +4142,15 @@ architecture STRUCTURE of kria_bd is
     dataOut : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component kria_bd_ADC_AFE_Diff_interfa_0_0;
+  component kria_bd_ADC_AFE_interface_0_0 is
+  port (
+    fclk_p : in STD_LOGIC;
+    rst : in STD_LOGIC;
+    data_p : in STD_LOGIC;
+    fclk_out : out STD_LOGIC;
+    dataOut : out STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component kria_bd_ADC_AFE_interface_0_0;
   signal ADC_AFE_Diff_interfa_0_fclk_out : STD_LOGIC;
   signal ADC_AFE_interface_0_dataOut : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal ADC_AFE_interface_0_fclk_out : STD_LOGIC;
