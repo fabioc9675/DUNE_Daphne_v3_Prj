@@ -289,7 +289,7 @@
             "inst_hier_path": "SlowControl/axi_quad_spi_0",
             "parameters": {
               "C_SCK_RATIO": {
-                "value": "8"
+                "value": "16"
               }
             }
           },

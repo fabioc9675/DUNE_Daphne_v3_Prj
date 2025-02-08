@@ -262,7 +262,7 @@ proc create_hier_cell_SlowControl { parentCell nameHier } {
 
   # Create instance: axi_quad_spi_0, and set properties
   set axi_quad_spi_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_quad_spi:3.2 axi_quad_spi_0 ]
-  set_property CONFIG.C_SCK_RATIO {8} $axi_quad_spi_0
+  set_property CONFIG.C_SCK_RATIO {16} $axi_quad_spi_0
 
 
   # Create instance: pmod_2, and set properties

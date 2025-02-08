@@ -293,17 +293,15 @@ vcom -work xil_defaultlib -93  \
 "../../../bd/kria_bd/ip/kria_bd_ADQ_DataFifo_AFE_0/sim/kria_bd_ADQ_DataFifo_AFE_0.vhd" \
 "../../../bd/kria_bd/ip/kria_bd_axi_dma_afe_1/sim/kria_bd_axi_dma_afe_1.vhd" \
 "../../../bd/kria_bd/ip/kria_bd_sine_wave_gen_0_0/sim/kria_bd_sine_wave_gen_0_0.vhd" \
-"../../../bd/kria_bd/ip/kria_bd_ADC_AFE_interface_0_0/sim/kria_bd_ADC_AFE_interface_0_0.vhd" \
 "../../../bd/kria_bd/ip/kria_bd_ADC_AFE_Diff_interfa_0_0/sim/kria_bd_ADC_AFE_Diff_interfa_0_0.vhd" \
+"../../../bd/kria_bd/ip/kria_bd_ADC_AFE_interface_0_0/sim/kria_bd_ADC_AFE_interface_0_0.vhd" \
+"../../../bd/kria_bd/sim/kria_bd.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_27  -v2k5 "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/7698" "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/ec67/hdl" "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/abef/hdl" "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/f0b6/hdl/verilog" "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/66be/hdl/verilog" "+incdir+D:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
 "../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/aeb3/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/7698" "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/ec67/hdl" "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/abef/hdl" "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/f0b6/hdl/verilog" "+incdir+../../../../AFE_Serdes.gen/sources_1/bd/kria_bd/ipshared/66be/hdl/verilog" "+incdir+D:/Xilinx/Vivado/2022.2/data/xilinx_vip/include" \
 "../../../bd/kria_bd/ip/kria_bd_auto_pc_0/sim/kria_bd_auto_pc_0.v" \
-
-vcom -work xil_defaultlib -93  \
-"../../../bd/kria_bd/sim/kria_bd.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"
