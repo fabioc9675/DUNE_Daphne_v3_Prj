@@ -46,52 +46,42 @@
 -- 
 -- DO NOT MODIFY THIS FILE.
 
--- IP VLNV: xilinx.com:module_ref:ADC_AFE_Diff_interface:1.0
+-- IP VLNV: xilinx.com:module_ref:sine_wave_gen:1.0
 -- IP Revision: 1
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY kria_bd_ADC_AFE_Diff_interfa_0_0 IS
+ENTITY kria_bd_sine_wave_gen_0_0 IS
   PORT (
-    fclk_p : IN STD_LOGIC;
-    fclk_n : IN STD_LOGIC;
+    clk : IN STD_LOGIC;
     rst : IN STD_LOGIC;
-    data_p : IN STD_LOGIC;
-    data_n : IN STD_LOGIC;
-    fclk_out : OUT STD_LOGIC;
-    dataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    sine_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
-END kria_bd_ADC_AFE_Diff_interfa_0_0;
+END kria_bd_sine_wave_gen_0_0;
 
-ARCHITECTURE kria_bd_ADC_AFE_Diff_interfa_0_0_arch OF kria_bd_ADC_AFE_Diff_interfa_0_0 IS
+ARCHITECTURE kria_bd_sine_wave_gen_0_0_arch OF kria_bd_sine_wave_gen_0_0 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF kria_bd_ADC_AFE_Diff_interfa_0_0_arch: ARCHITECTURE IS "yes";
-  COMPONENT ADC_AFE_Diff_interface IS
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF kria_bd_sine_wave_gen_0_0_arch: ARCHITECTURE IS "yes";
+  COMPONENT sine_wave_gen IS
     PORT (
-      fclk_p : IN STD_LOGIC;
-      fclk_n : IN STD_LOGIC;
+      clk : IN STD_LOGIC;
       rst : IN STD_LOGIC;
-      data_p : IN STD_LOGIC;
-      data_n : IN STD_LOGIC;
-      fclk_out : OUT STD_LOGIC;
-      dataOut : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+      sine_out : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
     );
-  END COMPONENT ADC_AFE_Diff_interface;
+  END COMPONENT sine_wave_gen;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 19999800, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN kria_bd_clk_wiz_0_0_clk_out1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
   ATTRIBUTE X_INTERFACE_PARAMETER OF rst: SIGNAL IS "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF rst: SIGNAL IS "xilinx.com:signal:reset:1.0 rst RST";
 BEGIN
-  U0 : ADC_AFE_Diff_interface
+  U0 : sine_wave_gen
     PORT MAP (
-      fclk_p => fclk_p,
-      fclk_n => fclk_n,
+      clk => clk,
       rst => rst,
-      data_p => data_p,
-      data_n => data_n,
-      fclk_out => fclk_out,
-      dataOut => dataOut
+      sine_out => sine_out
     );
-END kria_bd_ADC_AFE_Diff_interfa_0_0_arch;
+END kria_bd_sine_wave_gen_0_0_arch;

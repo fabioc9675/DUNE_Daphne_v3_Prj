@@ -1,14 +1,14 @@
 {
   "schema": "xilinx.com:schema:json_instance:1.0",
   "ip_inst": {
-    "xci_name": "kria_bd_ADC_AFE_Diff_interfa_0_0",
-    "cell_name": "ADC_AFE_Diff_interfa_0",
-    "component_reference": "xilinx.com:module_ref:ADC_AFE_Diff_interface:1.0",
+    "xci_name": "kria_bd_AFE_data_conv_LVDS_0_0",
+    "cell_name": "AFE_data_conv_LVDS_0",
+    "component_reference": "xilinx.com:module_ref:AFE_data_conv_LVDS:1.0",
     "ip_revision": "1",
-    "gen_directory": "../../../../../../AFE_IDDR_low.gen/sources_1/bd/kria_bd/ip/kria_bd_ADC_AFE_Diff_interfa_0_0",
+    "gen_directory": "../../../../../../AFE_IDDR_low.gen/sources_1/bd/kria_bd/ip/kria_bd_AFE_data_conv_LVDS_0_0",
     "parameters": {
       "component_parameters": {
-        "Component_Name": [ { "value": "kria_bd_ADC_AFE_Diff_interfa_0_0", "resolve_type": "user", "usage": "all" } ]
+        "Component_Name": [ { "value": "kria_bd_AFE_data_conv_LVDS_0_0", "resolve_type": "user", "usage": "all" } ]
       },
       "project_parameters": {
         "ARCHITECTURE": [ { "value": "zynquplus" } ],
@@ -29,7 +29,7 @@
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
         "IPREVISION": [ { "value": "1" } ],
         "MANAGED": [ { "value": "TRUE" } ],
-        "OUTPUTDIR": [ { "value": "../../../../../../AFE_IDDR_low.gen/sources_1/bd/kria_bd/ip/kria_bd_ADC_AFE_Diff_interfa_0_0" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../AFE_IDDR_low.gen/sources_1/bd/kria_bd/ip/kria_bd_AFE_data_conv_LVDS_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2022.2" } ],
@@ -44,7 +44,8 @@
         "data_p": [ { "direction": "in" } ],
         "data_n": [ { "direction": "in" } ],
         "fclk_out": [ { "direction": "out" } ],
-        "dataOut": [ { "direction": "out", "size_left": "15", "size_right": "0" } ]
+        "data_Lsb_out": [ { "direction": "out", "size_left": "15", "size_right": "0" } ],
+        "data_Msb_out": [ { "direction": "out", "size_left": "15", "size_right": "0" } ]
       },
       "interfaces": {
         "rst": {

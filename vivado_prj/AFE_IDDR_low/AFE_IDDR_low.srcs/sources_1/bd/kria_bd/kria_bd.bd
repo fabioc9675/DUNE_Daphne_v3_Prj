@@ -8,7 +8,8 @@
       "pfm_name": "xilinx:kr260_som:name:0.0",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "None",
-      "tool_version": "2022.2"
+      "tool_version": "2022.2",
+      "validated": "true"
     },
     "design_tree": {
       "SlowControl": {
@@ -57,8 +58,8 @@
         "axi_dma_afe_diff": ""
       },
       "sine_wave_gen_0": "",
-      "ADC_AFE_Diff_interfa_0": "",
-      "ADC_AFE_interface_0": ""
+      "ADC_AFE_interface_0": "",
+      "AFE_data_conv_LVDS_0": ""
     },
     "interface_ports": {
       "afe_gpio_ctrl": {
@@ -5321,6 +5322,18 @@
               "ASSOCIATED_RESET": {
                 "value": "rst",
                 "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "19999800",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "kria_bd_clk_wiz_0_0_clk_out1",
+                "value_src": "ip_prop"
               }
             }
           },
@@ -5329,43 +5342,6 @@
             "direction": "I"
           },
           "sine_out": {
-            "direction": "O",
-            "left": "15",
-            "right": "0"
-          }
-        }
-      },
-      "ADC_AFE_Diff_interfa_0": {
-        "vlnv": "xilinx.com:module_ref:ADC_AFE_Diff_interface:1.0",
-        "xci_name": "kria_bd_ADC_AFE_Diff_interfa_0_0",
-        "xci_path": "ip\\kria_bd_ADC_AFE_Diff_interfa_0_0\\kria_bd_ADC_AFE_Diff_interfa_0_0.xci",
-        "inst_hier_path": "ADC_AFE_Diff_interfa_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ADC_AFE_Diff_interface",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "fclk_p": {
-            "direction": "I"
-          },
-          "fclk_n": {
-            "direction": "I"
-          },
-          "rst": {
-            "type": "rst",
-            "direction": "I"
-          },
-          "data_p": {
-            "direction": "I"
-          },
-          "data_n": {
-            "direction": "I"
-          },
-          "fclk_out": {
-            "direction": "O"
-          },
-          "dataOut": {
             "direction": "O",
             "left": "15",
             "right": "0"
@@ -5397,6 +5373,48 @@
             "direction": "O"
           },
           "dataOut": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          }
+        }
+      },
+      "AFE_data_conv_LVDS_0": {
+        "vlnv": "xilinx.com:module_ref:AFE_data_conv_LVDS:1.0",
+        "xci_name": "kria_bd_AFE_data_conv_LVDS_0_0",
+        "xci_path": "ip\\kria_bd_AFE_data_conv_LVDS_0_0\\kria_bd_AFE_data_conv_LVDS_0_0.xci",
+        "inst_hier_path": "AFE_data_conv_LVDS_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "AFE_data_conv_LVDS",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "fclk_p": {
+            "direction": "I"
+          },
+          "fclk_n": {
+            "direction": "I"
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "data_p": {
+            "direction": "I"
+          },
+          "data_n": {
+            "direction": "I"
+          },
+          "fclk_out": {
+            "direction": "O"
+          },
+          "data_Lsb_out": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "data_Msb_out": {
             "direction": "O",
             "left": "15",
             "right": "0"
@@ -5503,12 +5521,6 @@
       }
     },
     "nets": {
-      "ADC_AFE_Diff_interfa_0_fclk_out": {
-        "ports": [
-          "ADC_AFE_Diff_interfa_0/fclk_out",
-          "AXI_DMA_Real_Diff/clk_adc"
-        ]
-      },
       "ADC_AFE_interface_0_dataOut": {
         "ports": [
           "ADC_AFE_interface_0/dataOut",
@@ -5519,6 +5531,18 @@
         "ports": [
           "ADC_AFE_interface_0/fclk_out",
           "AXI_DMA_Real/clk_adc"
+        ]
+      },
+      "AFE_data_conv_LVDS_0_data_Msb_out": {
+        "ports": [
+          "AFE_data_conv_LVDS_0/data_Msb_out",
+          "AXI_DMA_Real_Diff/data_in"
+        ]
+      },
+      "AFE_data_conv_LVDS_0_fclk_out": {
+        "ports": [
+          "AFE_data_conv_LVDS_0/fclk_out",
+          "AXI_DMA_Real_Diff/clk_adc"
         ]
       },
       "AXI_DMA_Real_Diff_s2mm_introut": {
@@ -5593,16 +5617,16 @@
           "ps8_0_axi_periph/M07_ACLK"
         ]
       },
-      "data_in_1": {
-        "ports": [
-          "ADC_AFE_Diff_interfa_0/dataOut",
-          "AXI_DMA_Real_Diff/data_in"
-        ]
-      },
-      "data_n_0_1": {
+      "data_in_n_1": {
         "ports": [
           "data_in_n",
-          "ADC_AFE_Diff_interfa_0/data_n"
+          "AFE_data_conv_LVDS_0/data_n"
+        ]
+      },
+      "data_in_p_1": {
+        "ports": [
+          "data_in_p",
+          "AFE_data_conv_LVDS_0/data_p"
         ]
       },
       "data_p_0_1": {
@@ -5611,28 +5635,22 @@
           "ADC_AFE_interface_0/data_p"
         ]
       },
-      "data_p_0_2": {
-        "ports": [
-          "data_in_p",
-          "ADC_AFE_Diff_interfa_0/data_p"
-        ]
-      },
-      "fclk_n_0_1": {
+      "fclk_in_n_1": {
         "ports": [
           "fclk_in_n",
-          "ADC_AFE_Diff_interfa_0/fclk_n"
+          "AFE_data_conv_LVDS_0/fclk_n"
+        ]
+      },
+      "fclk_in_p_1": {
+        "ports": [
+          "fclk_in_p",
+          "AFE_data_conv_LVDS_0/fclk_p"
         ]
       },
       "fclk_p_0_1": {
         "ports": [
           "fclk_in",
           "ADC_AFE_interface_0/fclk_p"
-        ]
-      },
-      "fclk_p_0_2": {
-        "ports": [
-          "fclk_in_p",
-          "ADC_AFE_Diff_interfa_0/fclk_p"
         ]
       },
       "io1_i_0_1": {
@@ -5672,8 +5690,8 @@
         "ports": [
           "xlconstant_0/dout",
           "sine_wave_gen_0/rst",
-          "ADC_AFE_Diff_interfa_0/rst",
-          "ADC_AFE_interface_0/rst"
+          "ADC_AFE_interface_0/rst",
+          "AFE_data_conv_LVDS_0/rst"
         ]
       },
       "xlslice_0_Dout": {
