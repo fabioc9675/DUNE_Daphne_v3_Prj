@@ -93,8 +93,8 @@ preplace netloc zynq_ultra_ps_e_0_M_AXI_HPM0_LPD 1 5 1 N 240
 levelinfo -pg 1 0 140 420 750 1160 1680 2290 2660 2820
 pagesize -pg 1 -db -bbox -sgen -120 0 2980 1160
 ",
-   "No Loops_ScaleFactor":"0.497093",
-   "No Loops_TopLeft":"-121,-221",
+   "No Loops_ScaleFactor":"0.431525",
+   "No Loops_TopLeft":"-121,0",
    "Reduced Jogs_ExpandedHierarchyInLayout":"",
    "Reduced Jogs_Layers":"/Clock_Generator/clk_wiz_0_clk_out1:true|/SlowControl/axi_quad_spi_0_ip2intc_irpt:true|/zynq_ultra_ps_e_0_pl_clk0:true|/Clock_Generator/proc_sys_reset_2_peripheral_aresetn:true|/Clock_Generator/clk_wiz_0_clk_out2:true|/Axi_DMA/axi_dma_afe_s2mm_introut:true|/Interrupt_Handler/axi_intc_0_irq:true|/Clock_Generator/clk_wiz_0_clk_out3:true|/zynq_ultra_ps_e_0_pl_resetn0:true|",
    "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS

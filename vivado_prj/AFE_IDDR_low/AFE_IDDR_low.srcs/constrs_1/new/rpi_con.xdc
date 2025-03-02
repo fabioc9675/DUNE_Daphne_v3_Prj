@@ -84,3 +84,4 @@
 #set_property PACKAGE_PIN AB9 [get_ports {rpi_gpio_tri_io[27]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {rpi_gpio_tri_io[27]}]
 
+

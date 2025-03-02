@@ -64,7 +64,7 @@ begin
     generic map (
         DIFF_TERM => FALSE, -- Differential Termination 
         IBUF_LOW_PWR => TRUE, -- Low power (TRUE) vs. performance (FALSE) setting for referenced I/O standards
-        IOSTANDARD => "DEFAULT")
+        IOSTANDARD => "DIFF_HSTL_I_18")
     port map (
         O  => FCLK,  -- Buffer output
         I  => fclk_p,  -- Diff_p buffer input (connect directly to top-level port)
@@ -75,7 +75,7 @@ begin
     generic map (
         DIFF_TERM => FALSE, -- Differential Termination 
         IBUF_LOW_PWR => TRUE, -- Low power (TRUE) vs. performance (FALSE) setting for referenced I/O standards
-        IOSTANDARD => "DEFAULT")
+        IOSTANDARD => "DIFF_HSTL_I_18")
     port map (
         O  => DATA,  -- Buffer output
         I  => data_p,  -- Diff_p buffer input (connect directly to top-level port)
